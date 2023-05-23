@@ -10,10 +10,30 @@
 # General
 --------------------------------------------------------------*/
 /* / Custom Css / */
+
+.dropDownServiceMobile {
+  display: none !important;
+}
+@media screen and (max-width: 990px) {
+  .dropDownServiceNormal {
+    display: none !important;
+  }
+  .dropDownServiceMobile {
+    display: block !important;
+  }
+}
 .HeroImage {
   width: 250px !important;
 }
 
+.navbar .dropdown:hover > .serviceMenu {
+  opacity: 1;
+  top: 143%;
+  visibility: visible;
+  /* /left: 30%; */
+  /* /margin: auto; */
+  transform: translateX(-30%);
+}
 /* / Custom Css / */
 body {
   font-family: "Open Sans", sans-serif;
@@ -267,8 +287,8 @@ h6 {
 }
 
 .navbar .dropdown ul a {
-  padding: 10px 20px;
-  font-size: 14px;
+  padding: 10px 15px;
+  font-size: 11px;
   text-transform: none;
   color: #15222b;
   font-weight: 400;
