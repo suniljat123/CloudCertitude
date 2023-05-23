@@ -43,8 +43,8 @@
 
 <body>
     <!-- ======= Header ======= -->
-    <header id="header" style="background-color: #303b43" class="fixed-top">
-        <div class="container d-flex align-items-center justify-content-between" class="fixed-top">
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
             <h1 class="logo">
                 <a href="index.html"><img src="assets/img/cloudlogo.png" height="100" width="100" /></a>
             </h1>
@@ -55,119 +55,192 @@
                 <ul>
                     <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li>   -->
                     <li class="dropdown">
-                        <a href="./index.html#about"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+                        <a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="./index.html#about">About us</a></li>
-                            <li><a href="./index.html#team">Leadership</a></li>
-                            <li><a href="./index.html#testimonials">Testimonials</a></li>
-                            <li><a href="index.html">Careers</a></li>
-                            <li><a href="index.html">Case Study</a></li>
+                            <li><a href="#about">About us</a></li>
+                            <li><a href="#team">Leadership</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Case Study</a></li>
                             <li><a href="Contact.html">Contact us</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="./index.html#features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+                    <li class="dropdown dropDownServiceNormal">
+                        <a href="#features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul class="serviceMenu" style="display: flex; align-items: normal !important">
+                            <div>
+                                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                                    Implementation
+                                </ol>
+                                <li class="ServiceLi">
+                                    <a href="sales.html">Sales Cloud</a>
+                                </li>
+                                <li class="ServiceLi"><a href="#">Marketing Cloud</a></li>
+                                <li class="ServiceLi"><a href="#">Analytics Cloud</a></li>
+                                <li class="ServiceLi"><a href="#">Experience Cloud</a></li>
+                                <li class="ServiceLi">
+                                    <a href="#">Financial services Cloud</a>
+                                </li>
+                                <li class="ServiceLi"><a href="#">Non-Profit Cloud</a></li>
+                                <li class="ServiceLi"><a href="#">Salesforce Pardot</a></li>
+                                <li class="ServiceLi"><a href="#">Community Cloud</a></li>
+                                <li class="ServiceLi"><a href="#">Health Cloud</a></li>
+                            </div>
+
+                            <div>
+                                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                                    Development
+                                </ol>
+                                <li class="ServiceLi">
+                                    <a href="#">Custom App Cloud Development</a>
+                                </li>
+                                <li class="ServiceLi">
+                                    <a href="#">Mobile-First Solution Development</a>
+                                </li>
+                                <li class="ServiceLi">
+                                    <a href="#">AppExchange Product Development</a>
+                                </li>
+                                <li class="ServiceLi">
+                                    <a href="#">Salesforce Customization</a>
+                                </li>
+                                <li class="ServiceLi">
+                                    <a href="#">Salesforce Configuration</a>
+                                </li>
+                            </div>
+
+                            <div>
+                                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                                    Migration
+                                </ol>
+                                <li class="ServiceLi">
+                                    <a href="#">Classic to Lightning Migration</a>
+                                </li>
+                                <li class="ServiceLi">
+                                    <a href="#">Third-Party to Salesforce Migration</a>
+                                </li>
+                            </div>
+
+                            <div>
+                                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                                    Support
+                                </ol>
+                                <li class="ServiceLi"><a href="#">Managed Services</a></li>
+                                <li class="ServiceLi">
+                                    <a href="#">Remote Administrator</a>
+                                </li>
+                                <li class="ServiceLi">
+                                    <a href="#">Salesforce Production Support</a>
+                                </li>
+                                <li class="ServiceLi">
+                                    <a href="#">User Admin and Management Training</a>
+                                </li>
+                            </div>
+
+                            <div>
+                                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                                    Integration & Consulting
+                                </ol>
+                                <li class="ServiceLi"><a href="#">ERP Integration</a></li>
+                                <li class="ServiceLi">
+                                    <a href="#">Accounting Software Integration</a>
+                                </li>
+                                <li class="ServiceLi">
+                                    <a href="#">Marketring Automation Integration</a>
+                                </li>
+                                <li class="ServiceLi">
+                                    <a href="#">Social Media Integration</a>
+                                </li>
+                                <li class="ServiceLi">
+                                    <a href="#">E-Commerce Integration</a>
+                                </li>
+                                <li class="ServiceLi"><a href="#">Chatbot Integration</a></li>
+                                <li class="ServiceLi">
+                                    <a href="#">Payment Gateway Integration</a>
+                                </li>
+                                <li class="ServiceLi">
+                                    <a href="#">Collaboration Tools Integration </a>
+                                </li>
+                                <li class="ServiceLi">
+                                    <a href="#">Calendra & Email Integration</a>
+                                </li>
+                                <li class="ServiceLi"><a href="#">CTI</a></li>
+                                <li class="ServiceLi"><a href="#">ITSM Integration</a></li>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <!-- for Mobile responsive navbar  -->
+                    <li class="dropdown dropDownServiceMobile">
+                        <a href="#features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li class="dropdown">
                                 <a href="#"><span>Implementation</span>
                                     <i class="bi bi-chevron-right"></i></a>
                                 <ul>
-                                    <li><a href="index.html">Sales Cloud</a></li>
-                                    <li><a href="index.html">Marketing Cloud</a></li>
-                                    <li><a href="index.html">Service Cloud</a></li>
-                                    <li><a href="index.html">Analytics Cloud</a></li>
-                                    <li><a href="index.html">Experience Cloud</a></li>
-                                    <li><a href="index.html">Financial services Cloud</a></li>
-                                    <li><a href="index.html">Non-Profit Cloud</a></li>
-                                    <li><a href="index.html">Salesforce Pardot</a></li>
-                                    <li><a href="index.html">Community Cloud</a></li>
-                                    <li><a href="index.html">Health Cloud</a></li>
+                                    <li><a href="#">Sales Cloud</a></li>
+                                    <li><a href="#">Marketing Cloud</a></li>
+                                    <li><a href="#">Service Cloud</a></li>
+                                    <li><a href="#">Analytics Cloud</a></li>
+                                    <li><a href="#">Experience Cloud</a></li>
+                                    <li><a href="#">Financial services Cloud</a></li>
+                                    <li><a href="#">Non-Profit Cloud</a></li>
+                                    <li><a href="#">Salesforce Pardot</a></li>
+                                    <li><a href="#">Community Cloud</a></li>
+                                    <li><a href="#">Health Cloud</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a href="#"><span>Development</span> <i class="bi bi-chevron-right"></i></a>
                                 <ul>
-                                    <li>
-                                        <a href="index.html">Custom App Cloud Development</a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html">Mobile-First Solution Development</a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html">AppExchange Product Development</a>
-                                    </li>
-                                    <li><a href="index.html">Salesforce Customization</a></li>
-                                    <li><a href="index.html">Salesforce Configuration</a></li>
+                                    <li><a href="#">Custom App Cloud Development</a></li>
+                                    <li><a href="#">Mobile-First Solution Development</a></li>
+                                    <li><a href="#">AppExchange Product Development</a></li>
+                                    <li><a href="#">Salesforce Customization</a></li>
+                                    <li><a href="#">Salesforce Configuration</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="index.html"><span>Migration</span> <i class="bi bi-chevron-right"></i></a>
+                                <a href="#"><span>Migration</span> <i class="bi bi-chevron-right"></i></a>
                                 <ul>
-                                    <li>
-                                        <a href="index.html">Classic to Lightning Migration</a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html">Third-Party to Salesforce Migration</a>
-                                    </li>
+                                    <li><a href="#">Classic to Lightning Migration</a></li>
+                                    <li><a href="#">Third-Party to Salesforce Migration</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="index.html"><span>Support</span> <i class="bi bi-chevron-right"></i></a>
+                                <a href="#"><span>Support</span> <i class="bi bi-chevron-right"></i></a>
                                 <ul>
-                                    <li><a href="index.html">Managed Services</a></li>
-                                    <li><a href="index.html">Remote Administrator</a></li>
-                                    <li>
-                                        <a href="index.html">Salesforce Production Support</a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html">User Admin and Management Training</a>
-                                    </li>
+                                    <li><a href="#">Managed Services</a></li>
+                                    <li><a href="#">Remote Administrator</a></li>
+                                    <li><a href="#">Salesforce Production Support</a></li>
+                                    <li><a href="#">User Admin and Management Training</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a href="#"><span>Integration and Consulting</span>
                                     <i class="bi bi-chevron-right"></i></a>
                                 <ul>
-                                    <li><a href="index.html">ERP Integration</a></li>
-                                    <li>
-                                        <a href="index.html">Accounting Software Integration</a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html">Marketring Automation Integration</a>
-                                    </li>
-                                    <li><a href="index.html">Social Media Integration</a></li>
-                                    <li><a href="index.html">E-Commerce Integration</a></li>
-                                    <li><a href="index.html">Chatbot Integration</a></li>
-                                    <li>
-                                        <a href="index.html">Payment Gateway Integration</a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html">Collaboration Tools Integration </a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html">Calendra & Email Integration</a>
-                                    </li>
-                                    <li><a href="index.html">CTI</a></li>
-                                    <li><a href="index.html">ITSM Integration</a></li>
+                                    <li><a href="#">ERP Integration</a></li>
+                                    <li><a href="#">Accounting Software Integration</a></li>
+                                    <li><a href="#">Marketring Automation Integration</a></li>
+                                    <li><a href="#">Social Media Integration</a></li>
+                                    <li><a href="#">E-Commerce Integration</a></li>
+                                    <li><a href="#">Chatbot Integration</a></li>
+                                    <li><a href="#">Payment Gateway Integration</a></li>
+                                    <li><a href="#">Collaboration Tools Integration </a></li>
+                                    <li><a href="#">Calendra & Email Integration</a></li>
+                                    <li><a href="#">CTI</a></li>
+                                    <li><a href="#">ITSM Integration</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
+                    <!-- for Mobile responsive navbar  -->
+
                     <!-- <li><a class="nav-link scrollto" href="#team">Our Product</a></li>   -->
                     <li class="dropdown">
-                        <a href="index.html"><span>Industries</span> <i class="bi bi-chevron-down"></i></a>
+                        <a href="#"><span>Industries</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="#">Non-Profit</a></li>
-                            <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li> -->
-
                             <li><a href="#">Education</a></li>
                             <li><a href="#">Public Sector</a></li>
                             <li><a href="#">Healthcare</a></li>
@@ -181,11 +254,11 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="nav-link scrollto" href="index.html">Our Product</a>
+                        <a class="nav-link scrollto" href="product.html">Our Product</a>
                     </li>
                     <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
                     <li>
-                        <a class="getstarted scrollto" href="./index.html#contact">Request Demo</a>
+                        <a class="getstarted scrollto" href="#contact">Request Demo</a>
                     </li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
