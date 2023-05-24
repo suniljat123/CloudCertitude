@@ -12,29 +12,199 @@
 --------------------------------------------------------------*/
 /* / Custom Css / */
 
-.dropDownServiceMobile {
-  display: none !important;
-}
-@media screen and (max-width: 990px) {
-  .dropDownServiceNormal {
-    display: none !important;
-  }
-  .dropDownServiceMobile {
-    display: block !important;
-  }
-}
 .HeroImage {
   width: 250px !important;
 }
-
-.navbar .dropdown:hover > .serviceMenu {
+.dropDownServiceMobile{
+  display: none !important; 
+}
+@media screen and (max-width: 990px) {
+  .dropDownServiceNormal{   
+    display: none !important;      
+  }
+  .dropDownServiceMobile{    
+    display: block !important;         
+  }
+}
+.navbar .dropdown:hover > .serviceMenu {  
   opacity: 1;
   top: 143%;
   visibility: visible;
   /* left: 30%; */
-  /* margin: auto; */
-  transform: translateX(-40%);
-  padding: 0.5rem;
+  margin: auto;
+  transform: translateX(-30%);
+}  
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #444444;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-products {
+  padding: 80px 0 54px;
+}
+
+.section-products .header {
+  margin-bottom: 50px;
+}
+
+.section-products .header h3 {
+  font-size: 1rem;
+  color: #fe302f;
+  font-weight: 500;
+}
+
+.section-products .header h2 {
+  font-size: 5.2rem;
+  font-weight: 400;
+  color: white; 
+  float: left;
+}
+
+.section-products .single-product {
+  margin-bottom: 26px;
+  border: 1px solid #b9b3b3;
+  border-radius: 7px;
+}
+
+.section-products .single-product .part-1 {
+  position: relative;
+  height: 165px;  
+  max-height: 165px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.section-products .single-product .part-1::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.section-products .single-product:hover .part-1::before {
+  transform: scale(1.2,1.2) rotate(5deg);
+}
+
+.section-products #product-1 .part-1::before {
+  /* background: url("assets/img/salesforce-sms-768x416.jpg") no-repeat center; */
+  background-size: cover;
+  transition: all 0.3s;
+}
+
+.section-products #product-2 .part-1::before {
+  /* background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center; */
+  background-size: cover;
+}
+
+.section-products #product-3 .part-1::before {
+  /* background: url("https://i.ibb.co/L8Nrb7p/1.jpg") no-repeat center; */
+  background-size: cover;
+}
+
+.section-products #product-4 .part-1::before {
+  /* background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center; */
+  background-size: cover;
+}
+
+.section-products .single-product .part-1 .discount,
+.section-products .single-product .part-1 .new {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  color: #ffffff;
+  background-color: #fe302f;
+  padding: 2px 8px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.section-products .single-product .part-1 .new {
+  left: 0;
+  background-color: #444444;
+}
+
+.section-products .single-product .part-1 ul {
+  position: absolute;
+  bottom: -41px;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  transition: bottom 0.5s, opacity 0.5s;
+}
+
+.section-products .single-product:hover .part-1 ul {
+  bottom: 30px;
+  opacity: 1;
+}
+
+.section-products .single-product .part-1 ul li {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.section-products .single-product .part-1 ul li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #ffffff;
+  color: #444444;
+  text-align: center;
+  box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+  transition: color 0.2s;
+}
+
+.section-products .single-product .part-1 ul li a:hover {
+  color: #fe302f;
+}
+
+.section-products .single-product .part-2 .product-title {
+  font-size: 1.5rem;
+  padding: 0 15px;
+  color: black;
+  font-weight: bold; 
+  text-align: center;
+}
+
+.section-products .single-product .part-2 h4 {
+  display: inline-block;
+  padding: 0 15px;
+  font-size: 1rem;
+}
+
+.section-products .single-product .part-2 .product-old-price {
+  position: relative;
+  padding: 0 7px;
+  padding: 0 15px;
+  margin-right: 2px;
+  opacity: 0.6;
+}
+
+.section-products .single-product .part-2 .product-old-price::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #444444;
+  transform: translateY(-50%);
 }
 /* / Custom Css / */
 body {
@@ -147,6 +317,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
+  background-color: rgba(21, 34, 43, 0.85);;
 }
 
 #header.header-scrolled,
@@ -448,7 +619,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("../img/Sales-Cloud-Banner-1024x438-1.webp") top center;
   background-size: cover;
   position: relative;
   padding: 0;
@@ -539,7 +710,33 @@ h6 {
     background-attachment: fixed;
   }
 }
-
+/* for Service menu responsive */
+@media only screen and (max-width: 1114px) and (min-width: 989px)  {      
+  .navbar .dropdown:hover > .serviceMenu {
+    opacity: 1;
+    top: 143%;
+    visibility: visible;
+    /* left: 30%; */
+    margin: auto;
+    transform: translateX(-35%);  
+  }  
+  .navbar .dropdown ul a {
+    padding: 10px 13px;
+    font-size: 10px;
+    text-transform: none;
+    color: #15222b;
+    font-weight: 400;
+}
+}
+/* for Service menu responsive */
+@media only screen and (max-width: 360px) and (min-width: 150px) {     
+  .section-products .header h2 {
+    font-size: 3.8rem;
+    font-weight: 400;
+    color: white;
+    float: left;
+}
+}
 @media only screen and (max-width: 768px) and (min-width: 400px) {
   #hero h1 {
     font-size: 24px;
