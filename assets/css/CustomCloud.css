@@ -33,7 +33,8 @@
   visibility: visible;
   /* left: 30%; */
   /* margin: auto; */
-  transform: translateX(-30%);
+  transform: translateX(-40%);
+  padding: 1.5rem;
 }
 /* / Custom Css / */
 body {
