@@ -291,7 +291,8 @@
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" style="background-image: url(./assets/img/salesforce-sales-cloud-review.png);">
+  <section id="hero" style="background-image: url(./assets/img/salesforce-sales-cloud-review.png);"
+    data-cutsom-vals="sunil">
     <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
       <h1>De Dupe Tool</h1>
       <h2>Grow your business and boost your productivity with our De Dupe Tool Product</h2>
@@ -901,8 +902,7 @@
   <script type="text/javascript">
     var EmailOtp = 0;
     function verifyOtp() {
-      console.log('otp===', document.getElementById('otpValue').value)
-      console.log('Emailotp===', EmailOtp)
+
       if (document.getElementById('otpValue').value === EmailOtp) {
         console.log('true')
 
@@ -916,6 +916,7 @@
           "Company": document.getElementById('company').value,
           "Phone": document.getElementById('phone').value,
           "Email": document.getElementById('email').value,
+          "MyPackageId": document.getElementById('hero').dataset.cutsomVals,
           "InsertLead": "InsertLead"
         });
 
