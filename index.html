@@ -1097,7 +1097,33 @@
 
   <script>
 
+    function getData() {
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
+
+      var raw = JSON.stringify({
+        "LastName": "Sunil",
+        "FirstName": "Jat",
+        "Company": "dsfdsfsdfsdfsf",
+        "Email": "sunil.barara.cloudcertitude@gmail.com",
+        "SendOtp": "InsertLead"
+      });
+
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
+
+      fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
+        .then(response => response.json())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+    }
     $(document).ready(function () {
+      getData()
       $(".customer-logos").slick({
         slidesToShow: 6,
         slidesToScroll: 1,
