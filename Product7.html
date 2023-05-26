@@ -360,15 +360,15 @@
         <div class="modal-body">
           <form>
             <div class="mb-3">
-              <label for="first_name" class="form-label">OTP</label>
-              <input class="form-control" id="first_name" maxlength="10" name="first_name" size="20" type="text">
+              <label for="otpValue" class="form-label">OTP</label>
+              <input class="form-control" id="otpValue" maxlength="10" name="first_name" size="20" type="text">
             </div>
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-target="#staticBackdrop" data-bs-toggle="modal">Go
             Back</button>
-          <button class="btn btn-primary">Verify</button>
+          <button class="btn btn-primary" onclick="verifyOtp()">Verify</button>
         </div>
       </div>
     </div>
@@ -898,6 +898,10 @@
 
 
   <script type="text/javascript">
+    function verifyOtp() {
+      console.log('otp===', document.getElementById('otpValue'.value))
+
+    }
     function sendOtp() {
       console.log("how are you");
       console.log("how are you=", document.getElementById('first_name').value);
