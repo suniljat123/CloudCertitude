@@ -904,21 +904,49 @@
       console.log('Emailotp===', EmailOtp)
       if (document.getElementById('otpValue').value === EmailOtp) {
         console.log('true')
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
+
+        var raw = JSON.stringify({
+          "LastName": document.getElementById('last_name').value,
+          "FirstName": document.getElementById('first_name').value,
+          "Company": document.getElementById('company').value,
+          "Phone": document.getElementById('phone').value,
+          "Email": document.getElementById('email').value,
+          "InsertLead": "InsertLead"
+        });
+
+        var requestOptions = {
+          method: 'POST',
+          headers: myHeaders,
+          body: raw,
+          redirect: 'follow'
+        };
+
+        fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
+          .then(response => response.json())
+          .then(result => {
+            EmailOtp = result
+            console.log(result)
+          })
+          .catch(error => console.log('error', error));
+
       }
 
     }
     function sendOtp() {
-      console.log("how are you");
-      console.log("how are you=", document.getElementById('first_name').value);
 
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
 
       var raw = JSON.stringify({
-        "LastName": document.getElementById('first_name').value,
-        "FirstName": "Jat",
-        "Company": "dsfdsfsdfsdfsf",
+        "LastName": document.getElementById('last_name').value,
+        "FirstName": document.getElementById('first_name').value,
+        "Company": document.getElementById('company').value,
+        "Phone": document.getElementById('phone').value,
         "Email": document.getElementById('email').value,
         "SendOtp": "InsertLead"
       });
