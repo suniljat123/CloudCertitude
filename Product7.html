@@ -898,8 +898,11 @@
 
 
   <script type="text/javascript">
+    var EmailOtp = 0;
     function verifyOtp() {
-      console.log('otp===', document.getElementById('otpValue'.value))
+      console.log('otp===', document.getElementById('otpValue').value)
+      console.log('Emailotp===', EmailOtp)
+
 
     }
     function sendOtp() {
@@ -927,7 +930,10 @@
 
       fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
-        .then(result => console.log(result))
+        .then(result => {
+          EmailOtp = result
+          console.log(result)
+        })
         .catch(error => console.log('error', error));
 
     }  
