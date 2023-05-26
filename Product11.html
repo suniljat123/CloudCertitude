@@ -292,7 +292,8 @@
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" style="background-image: url(./assets/img/salesforce-sales-cloud-review.png);">
+  <section id="hero" style="background-image: url(./assets/img/salesforce-sales-cloud-review.png);"
+    data-cutsom-vals="a1fDy000000Z08VIAS">
     <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
       <h1>Round Robin</h1>
       <h2>Grow your business and boost your productivity with our Round Robin Product</h2>
@@ -341,9 +342,8 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary" onclick="function sendLead(){
-            document.getElementById(leadForm).submit();
-          }" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Next</button>
+          <button type="button" class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+            onclick="sendOtp()">Next</button>
         </div>
       </div>
     </div>
@@ -367,7 +367,8 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-target="#staticBackdrop" data-bs-toggle="modal">Go
             Back</button>
-          <button class="btn btn-primary">Verify</button>
+          <button class="btn btn-primary" onclick="sendOtp()">Resend </button>
+          <button class="btn btn-primary" onclick="verifyOtp()">Verify</button>
         </div>
       </div>
     </div>
@@ -897,7 +898,80 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script type="text/javascript">
+    var EmailOtp = 0;
+    function verifyOtp() {
 
+      if (document.getElementById('otpValue').value === EmailOtp) {
+        console.log('true')
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
+
+        var raw = JSON.stringify({
+          "LastName": document.getElementById('last_name').value,
+          "FirstName": document.getElementById('first_name').value,
+          "Company": document.getElementById('company').value,
+          "Phone": document.getElementById('phone').value,
+          "Email": document.getElementById('email').value,
+          "MyPackageId": document.getElementById('hero').dataset.cutsomVals,
+          "InsertLead": "InsertLead"
+        });
+
+        var requestOptions = {
+          method: 'POST',
+          headers: myHeaders,
+          body: raw,
+          redirect: 'follow'
+        };
+
+        fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
+          .then(response => response.json())
+          .then(result => {
+            EmailOtp = result
+            console.log(result)
+            window.open(result, '_blank')
+          })
+          .catch(error => console.log('error', error));
+
+      }
+      else {
+        alert('Please Enter correct Otp')
+      }
+    }
+    function sendOtp() {
+
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
+
+      var raw = JSON.stringify({
+        "LastName": document.getElementById('last_name').value,
+        "FirstName": document.getElementById('first_name').value,
+        "Company": document.getElementById('company').value,
+        "Phone": document.getElementById('phone').value,
+        "Email": document.getElementById('email').value,
+        "SendOtp": "InsertLead"
+      });
+
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
+
+      fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
+        .then(response => response.json())
+        .then(result => {
+          EmailOtp = result
+          console.log(result)
+        })
+        .catch(error => console.log('error', error));
+
+    }  
+  </script>
   <script>
     $(document).ready(function () {
       $(".customer-logos").slick({
