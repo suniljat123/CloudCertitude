@@ -932,6 +932,7 @@
           .then(result => {
             EmailOtp = result
             console.log(result)
+            window.open(result, '_blank')
           })
           .catch(error => console.log('error', error));
 
