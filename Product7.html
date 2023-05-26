@@ -902,7 +902,9 @@
     function verifyOtp() {
       console.log('otp===', document.getElementById('otpValue').value)
       console.log('Emailotp===', EmailOtp)
-
+      if (document.getElementById('otpValue').value === EmailOtp) {
+        console.log('true')
+      }
 
     }
     function sendOtp() {
