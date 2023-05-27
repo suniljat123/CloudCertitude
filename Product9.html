@@ -897,11 +897,8 @@
   <script type="text/javascript">
     var EmailOtp = 0;
     function verifyOtp() {
-      if (document.getElementById("otpValue").value === '') {
-        $('#otpValue').addClass("is-invalid");
-      }
+      if (document.getElementById("otpValue").value.length === 6) {
 
-      else {
         if (document.getElementById('otpValue').value === EmailOtp) {
           console.log('true')
 
@@ -937,8 +934,12 @@
 
         }
         else {
-          alert('Please Enter correct Otp')
+          $('#otpValue').addClass("is-invalid");
         }
+      }
+
+      else {
+        $('#otpValue').addClass("is-invalid");
       }
 
     }
