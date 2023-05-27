@@ -929,7 +929,7 @@
               EmailOtp = result
 
               window.open(result, '_blank')
-              window.reload();
+              window.location.reload();
             })
             .catch(error => console.log('error', error));
 
@@ -970,7 +970,7 @@
         .then(response => response.json())
         .then(result => {
           EmailOtp = result
-          console.log(result)
+
         })
         .catch(error => console.log('error', error));
 
