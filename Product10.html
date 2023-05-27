@@ -901,44 +901,51 @@
   <script type="text/javascript">
     var EmailOtp = 0;
     function verifyOtp() {
+      if (document.getElementById("otpValue").value.length === 6) {
 
-      if (document.getElementById('otpValue').value === EmailOtp) {
-        console.log('true')
+        if (document.getElementById('otpValue').value === EmailOtp) {
+          console.log('true')
+          $('#otpValue').removeClass("is-invalid");
+          var myHeaders = new Headers();
+          myHeaders.append("Content-Type", "application/json");
+          myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
 
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-        myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
+          var raw = JSON.stringify({
+            "LastName": document.getElementById('last_name').value,
+            "FirstName": document.getElementById('first_name').value,
+            "Company": document.getElementById('company').value,
+            "Phone": document.getElementById('phone').value,
+            "Email": document.getElementById('email').value,
+            "MyPackageId": document.getElementById('hero').dataset.cutsomVals,
+            "InsertLead": "InsertLead"
+          });
 
-        var raw = JSON.stringify({
-          "LastName": document.getElementById('last_name').value,
-          "FirstName": document.getElementById('first_name').value,
-          "Company": document.getElementById('company').value,
-          "Phone": document.getElementById('phone').value,
-          "Email": document.getElementById('email').value,
-          "MyPackageId": document.getElementById('hero').dataset.cutsomVals,
-          "InsertLead": "InsertLead"
-        });
+          var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+          };
 
-        var requestOptions = {
-          method: 'POST',
-          headers: myHeaders,
-          body: raw,
-          redirect: 'follow'
-        };
+          fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
+            .then(response => response.json())
+            .then(result => {
+              EmailOtp = result
+              console.log(result)
+              window.open(result, '_blank')
+            })
+            .catch(error => console.log('error', error));
 
-        fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
-          .then(response => response.json())
-          .then(result => {
-            EmailOtp = result
-            console.log(result)
-            window.open(result, '_blank')
-          })
-          .catch(error => console.log('error', error));
-
+        }
+        else {
+          $('#otpValue').addClass("is-invalid");
+        }
       }
+
       else {
-        alert('Please Enter correct Otp')
+        $('#otpValue').addClass("is-invalid");
       }
+
     }
     function sendOtp() {
 
