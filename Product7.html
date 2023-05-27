@@ -931,8 +931,9 @@
             .then(response => response.json())
             .then(result => {
               EmailOtp = result
-              console.log(result)
+
               window.open(result, '_blank')
+              window.reload();
             })
             .catch(error => console.log('error', error));
 
