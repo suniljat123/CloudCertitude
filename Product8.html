@@ -903,7 +903,6 @@
       if (document.getElementById("otpValue").value.length === 6) {
 
         if (document.getElementById('otpValue').value === EmailOtp) {
-          console.log('true')
           $('#otpValue').removeClass("is-invalid");
           var myHeaders = new Headers();
           myHeaders.append("Content-Type", "application/json");
