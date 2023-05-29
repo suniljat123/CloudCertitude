@@ -975,12 +975,12 @@
 
             if (!($('#company').hasClass("is-invalid") || $('#phone').hasClass("is-invalid") || $('#email').hasClass("is-invalid") || $('#last_name').hasClass("is-invalid") || $('#first_name').hasClass("is-invalid"))) {
                 $("#staticBackdrop").modal("hide");
-                const modal2 = new bootstrap.Modal('#exampleModalToggle2');
 
                 createLead();
             }
         }
         function createLead() {
+            console.log('create Lead')
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
             myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
