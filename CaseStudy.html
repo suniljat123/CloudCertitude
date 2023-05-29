@@ -980,7 +980,6 @@
             }
         }
         function createLead() {
-            console.log('create Lead')
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
             myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
@@ -1004,7 +1003,6 @@
             fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
                 .then(response => response.json())
                 .then(result => {
-                    console.log('my result==', result)
                     document.getElementById('last_name').value = ''
                     document.getElementById('first_name').value = ''
                     document.getElementById('company').value = ''
