@@ -1136,12 +1136,11 @@
       myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
 
       var raw = JSON.stringify({
-        "LastName": document.getElementById('last_name').value,
-        "FirstName": document.getElementById('first_name').value,
-        "Company": document.getElementById('company').value,
-        "Phone": document.getElementById('phone').value,
+        "LastName": document.getElementById('name').value,
+        "Subject": document.getElementById('subject').value,
+        "Message": document.getElementById('Message').value,
         "Email": document.getElementById('email').value,
-        "SendOtp": "InsertLead"
+        "requestDemo": "requestDemoLead"
       });
 
       var requestOptions = {
@@ -1154,7 +1153,7 @@
       fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
-          console.log('myresult=', result)
+          console.log('Myresult=', result)
 
         })
         .catch(error => console.log('error', error));
