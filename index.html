@@ -943,7 +943,8 @@
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" id="Message"
+                  required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
@@ -1099,6 +1100,32 @@
   <script type="text/javascript">
     function createLead() {
       console.log('click')
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
+
+      var raw = JSON.stringify({
+        "LastName": document.getElementById('name').value,
+        "Subject": document.getElementById('subject').value,
+        "Message": document.getElementById('Message').value,
+        "Email": document.getElementById('email').value,
+        "requestDemo": "requestDemoLead"
+      });
+
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
+
+      fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
+        .then(response => response.json())
+        .then(result => {
+          console.log('result=', result)
+
+        })
+        .catch(error => console.log('error', error));
     }
   </script>
 
