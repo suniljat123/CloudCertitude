@@ -930,7 +930,7 @@
           </div>
 
           <div class="col-lg-6 mt-4 mt-lg-0">
-            <form class="php-email-form" onsubmit="createLead()">
+            <form class="php-email-form" onsubmit="createRequestLead()">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
@@ -1093,7 +1093,9 @@
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 
+
   <!-- Template Main JS File -->
+
 
   <script src="assets/js/main.js"></script>
 
@@ -1125,6 +1127,38 @@
         ],
       });
     });
+  </script>
+  <script>
+    function createRequestLead() {
+      console.log('hiii')
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
+
+      var raw = JSON.stringify({
+        "LastName": document.getElementById('last_name').value,
+        "FirstName": document.getElementById('first_name').value,
+        "Company": document.getElementById('company').value,
+        "Phone": document.getElementById('phone').value,
+        "Email": document.getElementById('email').value,
+        "SendOtp": "InsertLead"
+      });
+
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
+
+      fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
+        .then(response => response.json())
+        .then(result => {
+          console.log('myresult=', result)
+
+        })
+        .catch(error => console.log('error', error));
+    }
   </script>
 </body>
 
