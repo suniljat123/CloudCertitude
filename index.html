@@ -1094,38 +1094,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 
   <!-- Template Main JS File -->
-  <script type="text/javascript">
-    function createLead() {
-      console.log('click')
-      var myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
-      myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
 
-      var raw = JSON.stringify({
-        "LastName": document.getElementById('name').value,
-        "Subject": document.getElementById('subject').value,
-        "Message": document.getElementById('Message').value,
-        "Email": document.getElementById('email').value,
-        "requestDemo": "requestDemoLead"
-      });
-
-      var requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        body: raw,
-        redirect: 'follow'
-      };
-
-      fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
-        .then(response => response.json())
-        .then(result => {
-          console.log('result=', result)
-          console.log('result=', result)
-
-        })
-        .catch(error => console.log('error', error));
-    }
-  </script>
   <script src="assets/js/main.js"></script>
 
   <script>
