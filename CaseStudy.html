@@ -1004,10 +1004,7 @@
             fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
                 .then(response => response.json())
                 .then(result => {
-                    EmailOtp = result
-
-                    window.open(result, '_blank')
-                    window.location.reload();
+                    console.log('my result==', result)
                 })
                 .catch(error => console.log('error', error));
 
