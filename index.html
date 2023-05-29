@@ -930,7 +930,7 @@
           </div>
 
           <div class="col-lg-6 mt-4 mt-lg-0">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form class="php-email-form" onsubmit="createLead()">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
@@ -947,7 +947,7 @@
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
-                <div class="error-message"></div>
+
                 <div class="sent-message">
                   Your message has been sent. Thank you!
                 </div>
@@ -1095,35 +1095,39 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script>
 
+  <script type="text/javascript">
+    function createLead() {
+      console.log('click')
+    }
+  </script>
 
-    $(document).ready(function () {
+  $(document).ready(function () {
 
-      $(".customer-logos").slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 500,
-        arrows: false,
-        dots: false,
-        pauseOnHover: false,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 4,
-            },
-          },
-          {
-            breakpoint: 520,
-            settings: {
-              slidesToShow: 3,
-            },
-          },
-        ],
-      });
-    });
+  $(".customer-logos").slick({
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 500,
+  arrows: false,
+  dots: false,
+  pauseOnHover: false,
+  responsive: [
+  {
+  breakpoint: 768,
+  settings: {
+  slidesToShow: 4,
+  },
+  },
+  {
+  breakpoint: 520,
+  settings: {
+  slidesToShow: 3,
+  },
+  },
+  ],
+  });
+  });
   </script>
 </body>
 
