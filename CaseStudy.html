@@ -390,7 +390,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" onclick="sendLead()">Next</button>
+                    <button type="button" class="btn btn-primary" onclick="sendLead()">Submit</button>
                 </div>
             </div>
         </div>
@@ -1005,6 +1005,11 @@
                 .then(response => response.json())
                 .then(result => {
                     console.log('my result==', result)
+                    document.getElementById('last_name').value = ''
+                    document.getElementById('first_name').value = ''
+                    document.getElementById('company').value = ''
+                    document.getElementById('phone').value = ''
+                    document.getElementById('email').value = ''
                 })
                 .catch(error => console.log('error', error));
 
