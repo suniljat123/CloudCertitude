@@ -419,11 +419,16 @@
                             <div class="card-img-overlay d-flex flex-column">
                                 <div class="card-body">
                                     <small class="card-meta mb-2">Sales Cloud</small>
+
                                     <h4 class="card-title mt-0">
                                         <a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur
                                             dipisi?</a>
                                     </h4>
                                     <small><i class="far fa-clock"></i> October 15, 2020</small>
+                                </div>
+                                <div style="display: none;">
+                                    <a href="./assets/EducationIndustryCaseStudy.pdf" download id="salescloud"> click
+                                        me</a>
                                 </div>
                                 <div class="card-footer">
                                     <div class="media"></div>
@@ -937,6 +942,7 @@
 
     <script>
         function sendLead() {
+            document.getElementById('salescloud').click();
             let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
             if (document.getElementById("first_name").value === '') {
                 $('#first_name').addClass("is-invalid");
@@ -1008,6 +1014,7 @@
                     document.getElementById('company').value = ''
                     document.getElementById('phone').value = ''
                     document.getElementById('email').value = ''
+
                 })
                 .catch(error => console.log('error', error));
 
