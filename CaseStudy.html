@@ -574,7 +574,7 @@
                     </div>
 
                     <div class="col-sm-12 col-md-6 col-lg-4 mb-4" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop" onclick="setFileName('Helath Care Case Study')">
+                        data-bs-target="#staticBackdrop" onclick="setFileName('Health Care Case Study')">
                         <div class="card text-white card-has-bg click-col" style="
                   background-image: url('./assets/img/HealthCloud.jpg');
                 ">
@@ -729,7 +729,7 @@
 
 
                     <div class="col-sm-12 col-md-6 col-lg-4 mb-4" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop" onclick="setFileName('Education')">
+                        data-bs-target="#staticBackdrop" onclick="setFileName('Non-profit Cloud Case Study')">
                         <div class="card text-white card-has-bg click-col" style="
                   background-image: url('./assets/img/NonProfitCloud.jpg');
                 ">
@@ -1245,7 +1245,7 @@
             myfile = event;
         }
         function sendLead(element) {
-            console.log('hello send=', myfile)
+
             let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
             if (document.getElementById("first_name").value === '') {
                 $('#first_name').addClass("is-invalid");
@@ -1324,10 +1324,11 @@
 
         }
         function downloadFile() {
+            console.log('hello send=', myfile)
             console.log('hii')
             var fileName = document.getElementById("filename").value; // Get the file name from HTML input
 
-            var filePath = "assets/" + fileName; // Construct the file path
+            var filePath = "assets/CaseStudy/" + fileName; // Construct the file path
             filePath = filePath + '.pdf'
             var link = document.createElement("a");
             link.href = filePath;
@@ -1335,7 +1336,7 @@
 
             console.log('finemane=', filePath)
             console.log('link=', link)
-            //link.click();
+            link.click();
         }
     </script>
 </body>
