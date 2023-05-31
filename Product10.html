@@ -319,29 +319,34 @@
               <img src="assets/img/cloudlogo.png" style="margin: auto; height: 4rem;" alt="">
             </div>
             <div class="mb-3">
-              <label for="first_name" class="form-label">First Name</label>
+              <label for="first_name" class="form-label"> <span style="color: red;">*</span> First Name</label>
               <input class="form-control" id="first_name" maxlength="40" name="first_name" size="20" type="text"
                 placeholder="First Name">
+              <div id="fnameErr" style="padding-left: 5px;color: red;"></div>
             </div>
             <div class="mb-3">
-              <label for="last_name" class="form-label">Last Name</label>
+              <label for="last_name" class="form-label"><span style="color: red;">*</span>Last Name</label>
               <input class="form-control" id="last_name" maxlength="80" name="last_name" size="20" type="text"
                 placeholder="Last Name">
+              <div id="lnameErr" style="padding-left: 5px;color: red;"></div>
             </div>
             <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
+              <label for="email" class="form-label"><span style="color: red;">*</span>Email</label>
               <input class="form-control" id="email" maxlength="80" name="email" size="20" type="email"
                 placeholder="Email">
+              <div id="emailErr" style="padding-left: 5px;color: red;"></div>
             </div>
             <div class="mb-3">
-              <label for="phone" class="form-label">Phone</label>
+              <label for="phone" class="form-label"><span style="color: red;">*</span>Phone</label>
               <input class="form-control" id="phone" maxlength="10" name="phone" size="20" type="number"
                 placeholder="Phone">
+              <div id="phoneErr" style="padding-left: 5px;color: red;"></div>
             </div>
             <div class="mb-3">
-              <label for="company" class="form-label">Company Name</label>
+              <label for="company" class="form-label"><span style="color: red;">*</span>Company Name</label>
               <input class="form-control" id="company" maxlength="40" name="company" size="20" type="text"
                 placeholder="Company">
+              <div id="companyErr" style="padding-left: 5px;color: red;"></div>
             </div>
           </form>
         </div>
@@ -1003,62 +1008,110 @@
       });
     });
   </script>
-  <script>
-    function sendLead() {
-      let fname = document.getElementById("first_name").value
-      fname = fname.trim()
-      let lname = document.getElementById("last_name").value
-      lname = lname.trim()
-      let company = document.getElementById("company").value
-      company = company.trim()
-      let email = document.getElementById("email").value
-      email = email.trim()
-      let phone = document.getElementById("phone").value
-      phone = phone.trim()
-      let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      if (fname.length < 1) {
-        $('#first_name').addClass("is-invalid");
-      }
-      else if (fname.length > 0 && $('#first_name').hasClass("is-invalid")) {
-        $('#first_name').removeClass("is-invalid");
-      }
+  <<script>
+    window.addEventListener('input', function (evt) {
 
-      if (lname.length < 1) {
-        $('#last_name').addClass("is-invalid");
-      }
-      else if (lname.length > 0 && $('#last_name').hasClass("is-invalid")) {
-        $('#last_name').removeClass("is-invalid");
-      }
-      //console.log(mailformat.test(document.getElementById("email").value));
-      if (email.length < 1 || !(mailformat.test(document.getElementById("email").value))) {
-        $('#email').addClass("is-invalid");
-      }
-      else if (email.length > 0 && (mailformat.test(document.getElementById("email").value))) {
-        $('#email').removeClass("is-invalid");
-      }
-
-      if (phone.length !== 10) {
-        $('#phone').addClass("is-invalid");
-      }
-      else if (phone.length === 10 && $('#phone').hasClass("is-invalid")) {
-        $('#phone').removeClass("is-invalid");
-      }
-
-      if (company.length < 1) {
-        $('#company').addClass("is-invalid");
-      }
-      else if (company.length > 0 && $('#company').hasClass("is-invalid")) {
-        $('#company').removeClass("is-invalid");
-      }
-
-      if (!($('#company').hasClass("is-invalid") || $('#phone').hasClass("is-invalid") || $('#email').hasClass("is-invalid") || $('#last_name').hasClass("is-invalid") || $('#first_name').hasClass("is-invalid"))) {
-        $("#staticBackdrop").modal("hide");
-        const modal2 = new bootstrap.Modal('#exampleModalToggle2');
-        modal2.show();
-        sendOtp();
-      }
+    let fname = document.getElementById("first_name").value
+    fname = fname.trim()
+    let lname = document.getElementById("last_name").value
+    lname = lname.trim()
+    let company = document.getElementById("company").value
+    company = company.trim()
+    let email = document.getElementById("email").value
+    email = email.trim()
+    let phone = document.getElementById("phone").value
+    phone = phone.trim()
+    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    fNameError = document.getElementById("fnameErr");
+    lNameError = document.getElementById("lnameErr");
+    phoneError = document.getElementById("phoneErr");
+    companyError = document.getElementById("companyErr");
+    emailError = document.getElementById("emailErr");
+    if (evt.target.id === 'first_name') {
+    $('#first_name').removeClass("is-invalid");
+    fNameError.innerHTML = "";
     }
-  </script>
+    else if (evt.target.id === 'last_name') {
+    $('#last_name').removeClass("is-invalid");
+    lNameError.innerHTML = "";
+    }
+    else if (evt.target.id === 'phone') {
+    $('#phone').removeClass("is-invalid");
+    phoneError.innerHTML = "";
+    }
+    else if (evt.target.id === 'company') {
+    $('#company').removeClass("is-invalid");
+    companyError.innerHTML = "";
+    }
+    else if (evt.target.id === 'email') {
+    $('#email').removeClass("is-invalid");
+    emailError.innerHTML = "";
+    }
+    })
+    function sendLead() {
+    let fname = document.getElementById("first_name").value
+    fname = fname.trim()
+    let lname = document.getElementById("last_name").value
+    lname = lname.trim()
+    let company = document.getElementById("company").value
+    company = company.trim()
+    let email = document.getElementById("email").value
+    email = email.trim()
+    let phone = document.getElementById("phone").value
+    phone = phone.trim()
+    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    fNameError = document.getElementById("fnameErr");
+    lNameError = document.getElementById("lnameErr");
+    phoneError = document.getElementById("phoneErr");
+    companyError = document.getElementById("companyErr");
+    emailError = document.getElementById("emailErr");
+    if (fname.length < 2) { $('#first_name').addClass("is-invalid");
+      fNameError.innerHTML="First Name must contains atleast 2 characters\r\n" ; } else if (fname.length> 0 &&
+      $('#first_name').hasClass("is-invalid")) {
+      $('#first_name').removeClass("is-invalid");
+      fNameError.innerHTML = "";
+      }
+
+      if (lname.length < 2) { $('#last_name').addClass("is-invalid");
+        lNameError.innerHTML="Last Name must contains atleast 2 characters\r\n" ; } else if (lname.length> 0 &&
+        $('#last_name').hasClass("is-invalid")) {
+        $('#last_name').removeClass("is-invalid");
+        lNameError.innerHTML = "";
+        }
+        //console.log(mailformat.test(document.getElementById("email").value));
+        if (email.length < 1 || !(mailformat.test(document.getElementById("email").value))) {
+          $('#email').addClass("is-invalid"); emailError.innerHTML="Please Enter Correct Email\r\n" ; } else if
+          (email.length> 0 && (mailformat.test(document.getElementById("email").value))) {
+          $('#email').removeClass("is-invalid");
+          emailError.innerHTML = "";
+          }
+
+          if (phone.length !== 10) {
+          $('#phone').addClass("is-invalid");
+          phoneError.innerHTML = "Please Enter Correct Phone Number\r\n";
+          }
+          else if (phone.length === 10 && $('#phone').hasClass("is-invalid")) {
+          $('#phone').removeClass("is-invalid");
+          phoneError.innerHTML = "";
+          }
+
+          if (company.length < 2) { $('#company').addClass("is-invalid");
+            companyError.innerHTML="Company Name must contains atleast 2 characters\r\n" ; } else if (company.length> 0
+            && $('#company').hasClass("is-invalid")) {
+            $('#company').removeClass("is-invalid");
+            companyError.innerHTML = "";
+            }
+
+            if (!($('#company').hasClass("is-invalid") || $('#phone').hasClass("is-invalid") ||
+            $('#email').hasClass("is-invalid") || $('#last_name').hasClass("is-invalid") ||
+            $('#first_name').hasClass("is-invalid"))) {
+            $("#staticBackdrop").modal("hide");
+            const modal2 = new bootstrap.Modal('#exampleModalToggle2');
+            modal2.show();
+            sendOtp();
+            }
+            }
+            </script>
 </body>
 
 </html>
