@@ -320,23 +320,28 @@
             </div>
             <div class="mb-3">
               <label for="first_name" class="form-label">First Name</label>
-              <input class="form-control" id="first_name" maxlength="40" name="first_name" size="20" type="text">
+              <input class="form-control" id="first_name" maxlength="40" name="first_name" size="20" type="text"
+                placeholder="First Name">
             </div>
             <div class="mb-3">
               <label for="last_name" class="form-label">Last Name</label>
-              <input class="form-control" id="last_name" maxlength="80" name="last_name" size="20" type="text">
+              <input class="form-control" id="last_name" maxlength="80" name="last_name" size="20" type="text"
+                placeholder="Last Name">
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
-              <input class="form-control" id="email" maxlength="80" name="email" size="20" type="text">
+              <input class="form-control" id="email" maxlength="80" name="email" size="20" type="email"
+                placeholder="Email">
             </div>
             <div class="mb-3">
               <label for="phone" class="form-label">Phone</label>
-              <input class="form-control" id="phone" maxlength="10" name="phone" size="20" type="text">
+              <input class="form-control" id="phone" maxlength="10" name="phone" size="20" type="number"
+                placeholder="Phone">
             </div>
             <div class="mb-3">
               <label for="company" class="form-label">Company Name</label>
-              <input class="form-control" id="company" maxlength="40" name="company" size="20" type="text">
+              <input class="form-control" id="company" maxlength="40" name="company" size="20" type="text"
+                placeholder="Company">
             </div>
           </form>
         </div>
@@ -1000,39 +1005,49 @@
   </script>
   <script>
     function sendLead() {
+      let fname = document.getElementById("first_name").value
+      fname = fname.trim()
+      let lname = document.getElementById("last_name").value
+      lname = lname.trim()
+      let company = document.getElementById("company").value
+      company = company.trim()
+      let email = document.getElementById("email").value
+      email = email.trim()
+      let phone = document.getElementById("phone").value
+      phone = phone.trim()
       let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      if (document.getElementById("first_name").value === '') {
+      if (fname.length < 1) {
         $('#first_name').addClass("is-invalid");
       }
-      if (document.getElementById("first_name").value !== '' && $('#first_name').hasClass("is-invalid")) {
+      else if (fname.length > 0 && $('#first_name').hasClass("is-invalid")) {
         $('#first_name').removeClass("is-invalid");
       }
 
-      if (document.getElementById("last_name").value === '') {
+      if (lname.length < 1) {
         $('#last_name').addClass("is-invalid");
       }
-      if (document.getElementById("last_name").value !== '' && $('#last_name').hasClass("is-invalid")) {
+      else if (lname.length > 0 && $('#last_name').hasClass("is-invalid")) {
         $('#last_name').removeClass("is-invalid");
       }
       //console.log(mailformat.test(document.getElementById("email").value));
-      if (document.getElementById("email").value === '' || !(mailformat.test(document.getElementById("email").value))) {
+      if (email.length < 1 || !(mailformat.test(document.getElementById("email").value))) {
         $('#email').addClass("is-invalid");
       }
-      if (document.getElementById("email").value !== '' && (mailformat.test(document.getElementById("email").value))) {
+      else if (email.length > 0 && (mailformat.test(document.getElementById("email").value))) {
         $('#email').removeClass("is-invalid");
       }
 
-      if (document.getElementById("phone").value === '' && (document.getElementById("phone").value.length > 12 || document.getElementById("phone").value.length < 5)) {
+      if (phone.length !== 10) {
         $('#phone').addClass("is-invalid");
       }
-      if (document.getElementById("phone").value !== '' && $('#phone').hasClass("is-invalid")) {
+      else if (phone.length === 10 && $('#phone').hasClass("is-invalid")) {
         $('#phone').removeClass("is-invalid");
       }
 
-      if (document.getElementById("company").value === '') {
+      if (company.length < 1) {
         $('#company').addClass("is-invalid");
       }
-      if (document.getElementById("company").value !== '' && $('#company').hasClass("is-invalid")) {
+      else if (company.length > 0 && $('#company').hasClass("is-invalid")) {
         $('#company').removeClass("is-invalid");
       }
 
