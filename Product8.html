@@ -369,7 +369,8 @@
           <form>
             <div class="mb-3">
               <label for="otpValue" class="form-label">OTP</label>
-              <input class="form-control" id="otpValue" maxlength="10" name="first_name" size="20" type="text">
+              <input class="form-control" id="otpValue" maxlength="6" name="first_name" size="20" type="number">
+              <div id="otpError" style="padding-left: 5px;color: red;"></div>
             </div>
           </form>
         </div>
@@ -902,51 +903,46 @@
   <script type="text/javascript">
     var EmailOtp = 0;
     function verifyOtp() {
-      if (document.getElementById("otpValue").value.length === 6) {
+      if ((document.getElementById('otpValue').value === EmailOtp) && (document.getElementById("otpValue").value.length === 6)) {
+        $('#otpValue').removeClass("is-invalid");
+        otpError.innerHTML = "";
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
 
-        if (document.getElementById('otpValue').value === EmailOtp) {
-          $('#otpValue').removeClass("is-invalid");
-          var myHeaders = new Headers();
-          myHeaders.append("Content-Type", "application/json");
-          myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
+        var raw = JSON.stringify({
+          "LastName": document.getElementById('last_name').value,
+          "FirstName": document.getElementById('first_name').value,
+          "Company": document.getElementById('company').value,
+          "Phone": document.getElementById('phone').value,
+          "Email": document.getElementById('email').value,
+          "MyPackageId": document.getElementById('hero').dataset.cutsomVals,
+          "InsertLead": "InsertLead"
+        });
 
-          var raw = JSON.stringify({
-            "LastName": document.getElementById('last_name').value,
-            "FirstName": document.getElementById('first_name').value,
-            "Company": document.getElementById('company').value,
-            "Phone": document.getElementById('phone').value,
-            "Email": document.getElementById('email').value,
-            "MyPackageId": document.getElementById('hero').dataset.cutsomVals,
-            "InsertLead": "InsertLead"
-          });
+        var requestOptions = {
+          method: 'POST',
+          headers: myHeaders,
+          body: raw,
+          redirect: 'follow'
+        };
 
-          var requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: raw,
-            redirect: 'follow'
-          };
+        fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
+          .then(response => response.json())
+          .then(result => {
+            EmailOtp = result
 
-          fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
-            .then(response => response.json())
-            .then(result => {
-              EmailOtp = result
+            window.open(result, '_blank')
+            window.location.reload();
+          })
+          .catch(error => console.log('error', error));
 
-              window.open(result, '_blank')
-              window.location.reload();
-            })
-            .catch(error => console.log('error', error));
-
-        }
-        else {
-          $('#otpValue').addClass("is-invalid");
-        }
       }
-
       else {
         $('#otpValue').addClass("is-invalid");
-      }
+        otpError.innerHTML = "Please enter correct OTP";
 
+      }
     }
     function sendOtp() {
 
@@ -1010,17 +1006,6 @@
   <script>
     window.addEventListener('input', function (evt) {
 
-      let fname = document.getElementById("first_name").value
-      fname = fname.trim()
-      let lname = document.getElementById("last_name").value
-      lname = lname.trim()
-      let company = document.getElementById("company").value
-      company = company.trim()
-      let email = document.getElementById("email").value
-      email = email.trim()
-      let phone = document.getElementById("phone").value
-      phone = phone.trim()
-      let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       fNameError = document.getElementById("fnameErr");
       lNameError = document.getElementById("lnameErr");
       phoneError = document.getElementById("phoneErr");
@@ -1045,6 +1030,10 @@
       else if (evt.target.id === 'email') {
         $('#email').removeClass("is-invalid");
         emailError.innerHTML = "";
+      }
+      else if (evt.target.id === 'otpValue') {
+        $('#otpValue').removeClass("is-invalid");
+        otpError.innerHTML = "";
       }
     })
     function sendLead() {
