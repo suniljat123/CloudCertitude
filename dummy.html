@@ -14,6 +14,7 @@
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Google Fonts -->
+    <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet" />
@@ -30,7 +31,6 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/slider.css" rel="stylesheet" />
-    <link href="assets/css/CustomCloud.css" rel="stylesheet" />
 
     <!-- =======================================================
   * Template Name: Dewi
@@ -39,12 +39,103 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+    <style>
+        .footer {
+            font-size: 14px;
+            background-color: #1f1f24;
+            padding: 50px 0;
+            color: rgba(255, 255, 255, 0.7);
+
+
+        }
+
+        .footer .icon {
+            margin-right: 15px;
+            font-size: 24px;
+            line-height: 0;
+        }
+
+        .footer h4 {
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 5px;
+            color: #fff;
+        }
+
+        .footer .footer-links {
+            margin-bottom: 30px;
+        }
+
+        .footer .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer .footer-links ul li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer .footer-links ul li:first-child {
+            padding-top: 0;
+        }
+
+        .footer .footer-links ul a {
+            color: rgba(255, 255, 255, 0.6);
+            transition: 0.3s;
+            display: inline-block;
+            line-height: 1;
+        }
+
+        .footer .footer-links ul a:hover {
+            color: #fff;
+        }
+
+        .footer .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        .footer .social-links a:hover {
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .footer .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer .credits {
+            padding-top: 4px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .footer .credits a {
+            color: #fff;
+        }
+    </style>
+
 </head>
 
 <body>
     <!-- ======= Header ======= -->
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top">
+
+    <header id="header" style="background-color: #303b43" class="fixed-top">
         <div class="container d-flex align-items-center justify-content-between">
             <h1 class="logo">
                 <a href="index.html"><img src="assets/img/cloudlogo.png" height="100" width="100" /></a>
@@ -54,7 +145,6 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <!-- <li><a class="nav-link scrollto active" href="index.html">Home</a></li> -->
 
                     <li class="dropdown dropDownServiceNormal">
                         <a href="#features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
@@ -119,12 +209,37 @@
                                     <a href="SalesforceProductionSupport.html">Salesforce Production </a>
                                 </li>
                                 <li class="ServiceLi">
-                                    <a href="UserAdminAndManagementTraning.html">User Admin and Management</a>
+                                    <a href="UserAdminAndManagementTraning.html">User Admin and Management </a>
                                 </li>
                             </div>
 
+                            <!-- <div>
+                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                  Migration
+                </ol>
+                <li class="ServiceLi">
+                  <a href="ClassicToLightningMigration.html">Classic to Lightning </a>
+                </li>
+                <li class="ServiceLi">
+                  <a href="ThirdPartyToSalesforceMigration.html">Third-Party to Salesforce </a>
+                </li>
+              </div> -->
 
-
+                            <!-- <div>
+                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                  Support
+                </ol>
+                <li class="ServiceLi"><a href="ManagedServices.html">Managed Services</a></li>
+                <li class="ServiceLi">
+                  <a href="RemoteAdministrator.html">Remote Administrator</a>
+                </li>
+                <li class="ServiceLi">
+                  <a href="SalesforceProductionSupport.html">Salesforce Production </a>
+                </li>
+                <li class="ServiceLi">
+                  <a href="UserAdminAndManagementTraning.html">User Admin and Management Training</a>
+                </li>
+              </div> -->
 
                             <div>
                                 <ol style="color: black; font-weight: bold; padding-left: 13px">
@@ -261,9 +376,9 @@
                         <ul>
                             <li><a href="./index.html#about">About us</a></li>
                             <li><a href="./index.html#team">Leadership</a></li>
-                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="./index.html#testimonials">Testimonials</a></li>
                             <li><a href="index.html">Careers</a></li>
-                            <li><a href="index.html">Case Study</a></li>
+                            <li><a href="CaseStudy.html">Case Study</a></li>
                             <li><a href="Contact.html">Contact us</a></li>
                         </ul>
                     </li>
@@ -278,232 +393,121 @@
         </div>
     </header>
     <!-- End Header -->
-    <!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" style="background-image: url(./assets/img/Mobile-sales-app.jpg);">
-        <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
-            <h1>App Exchange Product</h1>
-            <h2>Grow your business and boost your productivity with Salesforce App Exchange Product.</h2>
-            <div class="d-flex">
-                <a href="Contact.html" class="btn-get-started scrollto">Get In Touch</a> &nbsp;&nbsp;
-                <a href="./index.html#WHYCHOOSEUS" class="btn-get-started scrollto">Why Choose Us</a>
-            </div>
-        </div>
-    </section><!-- End Hero -->
-    <!-- End Hero -->
 
-    <main id="main">
+    <div class="section-title" style="padding-left: 4rem; padding-top: 10rem">
+        <h2>Contact</h2>
+        <p>Contact us</p>
+    </div>
 
-        <!-- ======= About Section ======= -->
-        <section class="about">
-            <div class="container" data-aos="fade-up">
-
-
+    <div class="container">
+        <div class="row" style="padding-bottom: 5rem">
+            <div class="col">
                 <div class="row">
-
-                    <div class="col-lg-6 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="assets/img/tem.jpeg" class="img-fluid" alt="" style="width: 100%;">
-                        <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a> -->
-                    </div>
-
-                    <div class="col-lg-6 pt-3 pt-lg-0 content">
-                        <!-- <h3 style="text-align: center">COMPANY OVERVIEW</h3> -->
-                        <p>
-                            At Cloud Certitude, we specialize in AppExchange product development, enabling businesses to
-                            extend the power of
-                            Salesforce and provide tailored solutions to their customers.
-                        </p>
-
-                        <p>
-                            With our expertise in Salesforce technologies and a deep
-                            understanding of the AppExchange ecosystem, we deliver high-quality, scalable, and
-                            innovative applications that enhance
-                            productivity, streamline processes, and drive business growth.
-                            <br />
-                            <br />
-                            We as a team at Cloud Certitude have been emphasizing and providing complete satisfaction to
-                            our clients
-                            globally since 2013.
-                            <br />
-                            <br />
-                            We begin by understanding your business objectives and specific requirements for your
-                            AppExchange product.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- End About Section -->
-
-
-        <!-- ======= Features Section ======= -->
-        <section id="features" class="features">
-            <div class="container" data-aos="fade-up">
-
-                <div class="tab-content">
-                    <div class="tab-pane active show" id="tab-1">
+                    <div class="col">
                         <div class="row">
-                            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                                <h3>Our Approach to AppExchange Product Development</h3>
-                                <!-- <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore
-                  magna aliqua.
-                </p> -->
-                                <ul>
-                                    <li><i class="ri-check-double-line"></i>
-                                        <span style="font-weight: 600;">Salesforce Expertise:</span> As a Salesforce
-                                        partner,
-                                        we have a strong foundation in Salesforce technologies and best
-                                        practices. Our certified Salesforce developers and consultants bring deep
-                                        expertise in Salesforce CRM, Lightning
-                                        Platform, Apex, Visualforce, and other Salesforce technologies. We leverage this
-                                        expertise to deliver robust and
-                                        scalable AppExchange solutions.
-                                    </li>
-                                    <li><i class="ri-check-double-line"></i><span style="font-weight: 600;">Requirement
-                                            Gathering and Analysis:</span> We begin by understanding your business
-                                        objectives and specific requirements for
-                                        your AppExchange product. Our team of experts collaborates closely with you to
-                                        gather insights, identify key
-                                        functionalities, and define the scope of the project. We analyze your target
-                                        audience and market to ensure that your
-                                        product aligns with customer needs and industry trends.
-                                    </li>
-                                    <li><i class="ri-check-double-line"></i><span style="font-weight: 600;">Salesforce
-                                            Expertise:</span>Scalability and Performance: Scalability is
-                                        a key advantage of
-                                        cloud-based applications. We design and develop your custom application with
-                                        scalability in mind,
-                                        allowing it to handle increasing workloads and user demands as your business
-                                        grows. We optimize
-                                        performance, ensuring that your application delivers exceptional responsiveness
-                                        and speed.
-                                    </li>
-                                    <li><i class="ri-check-double-line"></i><span style="font-weight: 600;">Salesforce
-                                            Expertise:</span>Scalability and Performance: Scalability is
-                                        a key advantage of
-                                        cloud-based applications. We design and develop your custom application with
-                                        scalability in mind,
-                                        allowing it to handle increasing workloads and user demands as your business
-                                        grows. We optimize
-                                        performance, ensuring that your application delivers exceptional responsiveness
-                                        and speed.
-                                    </li>
-                                </ul>
+                            <div class="col-xl-6 " style="width: fit-content;  "><img src="assets/img/Jersey-City.jpg"
+                                    alt="" style="height: 200px; width: 200px" /></div>
+                            <div class="col-xl-6">
+                                <h3>Gurugram</h3>
+                                <p style="color: #2f363f">
+                                    DG-B-1704&05, 17th Floor, Emaar Digital Green, Golf course
+                                    Extn. Road, Sectore-62, Gurugram, Haryana 122004
+                                    <br />
 
-                            </div>
-                            <div class="col-lg-6 order-1 order-lg-2 text-center">
-                                <img src="assets/img/appexchange.png" style="width: 100%; " alt="" class="img-fluid">
+                                <p>
+                                    📞 +1 (408) 400-3215 <br />
+                                    📞 +91 124 6080 102 <br />
+                                    ✉️ info@cloudcertitude.com
+                                </p>
+
+                                </p>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
-        </section><!-- End Features Section -->
-
-
-
-
-        <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials">
-            <div class="container" data-aos="zoom-in">
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                                <h3>Saul Goodman</h3>
-                                <h4>Ceo &amp; Founder</h4>
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-xl-6" style="width: fit-content;   ">
+                                <img src="assets/img/2.jpg" alt="" style="height: 200px; width: 200px" />
+                            </div>
+                            <div class="col-xl-6">
+                                <h3>Ajmer</h3>
+                                <p style="color: #2f363f">
+                                    Unit # 987 - 856, Near Mittal Hospital, Tower 53, Sector -
+                                    56C, Ajmer, Rajasthan 305001
+                                    <br />
                                 <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                    rhoncus. Accusantium
-                                    quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    📞 +1 (408) 400-3215<br />
+                                    📞 +91 124 6080 102<br />
+                                    ✉️ info@cloudcertitude.com
+                                </p>
+
                                 </p>
                             </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                                <h3>Sara Wilsson</h3>
-                                <h4>Designer</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                    cillum eram malis
-                                    quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                                <h3>Jena Karlis</h3>
-                                <h4>Store Owner</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
-                                    veniam duis minim
-                                    tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                                <h3>Matt Brandon</h3>
-                                <h4>Freelancer</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                    fugiat minim velit
-                                    minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore
-                                    illum veniam.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                                <h3>John Larson</h3>
-                                <h4>Entrepreneur</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                    veniam enim culpa
-                                    labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi
-                                    cillum quid.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div><!-- End testimonial item -->
-
+                        </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <table>
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td style="padding-left: 10px">
+
+                            </td>
+                        </tr>
+                    </table>
                 </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- ======================== -->
+    <br>
+    <br>
+    <br>
+    <footer id="footer">
+        <div class="container">
+            <img src="assets/img/cloudlogo.png" height="100" width="170" />
+            <p>Maximize Salesforce User Adoption and Transform Customer Experiences.</p>
+            <div class="social-links">
+                <a href="https://twitter.com/cloudcertitude" target="_blank" class="twitter"><i
+                        class="bx bxl-twitter"></i></a>
+                <a href="https://www.facebook.com/cloudcertitude" target="_blank" class="facebook"><i
+                        class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/cloud_certitude/" target="_blank" class="instagram"><i
+                        class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="https://www.linkedin.com/company/cloudcertitude/" class="linkedin" target="_blank"><i
+                        class="bx bxl-linkedin"></i></a>
+            </div>
+            <div class="" style="display: flex;justify-content:center;flex-wrap:wrap;">
+                <img src="assets/img/f1.png" height="100" width="100" class="m-2" />
+                <img src="assets/img/f2.png" height="100" width="100" class="m-2" />
+                <img src="assets/img/f3.png" height="100" width="100" class="m-2" />
+                <img src="assets/img/f4.jpg" height="100" width="100" class="m-2" />
+            </div>
+            <br>
+            <div class="copyright">
+                &copy; Copyright <strong><span>Cloud Certitude </span></strong>. All
+                Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/ -->
 
             </div>
-        </section><!-- End Testimonials Section -->
+        </div>
+    </footer>
 
 
-    </main><!-- End #main -->
-
-    <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
 
         <div class="container">
@@ -583,6 +587,191 @@
         </div>
 
     </footer>
+
+    <footer id="footer" class="footer">
+
+        <div class="container">
+            <div class="row gy-3">
+                <div class="col-lg-3 col-md-6 d-flex">
+                    <i class="bi bi-geo-alt icon"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>
+                            DG-B-1704&05, 17th Floor, Emaar Digital Green, Golf course
+                            Extn. Road, Sectore-62, Gurugram, Haryana 122004
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links d-flex">
+                    <i class="bi bi-telephone icon"></i>
+                    <div>
+                        <h4>Reservations</h4>
+                        <p>
+                            <strong>Phone:</strong> +91 124 6080 102<br>
+                            <strong>Email:</strong> <a href="mailto: info@cloudcertitude.com"
+                                style="color: #ffffff; ">info@cloudcertitude.com</a><br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links d-flex">
+                    <i class="bi bi-clock icon"></i>
+                    <div>
+                        <h4>Opening Hours</h4>
+                        <p>
+                            <strong>Mon-Fri: </strong>10AM - 7PM<br>
+                            Sun-Sat: Closed
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Follow Us</h4>
+
+                    <div class="social-links d-flex">
+                        <a href="https://twitter.com/cloudcertitude" target="_blank" class="twitter"><i
+                                class="bi bi-twitter"></i></a>
+                        <a href="https://www.facebook.com/cloudcertitude" target="_blank" class="facebook"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/cloud_certitude/" target="_blank" class="instagram"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/cloudcertitude/" class="linkedin" target="_blank"><i
+                                class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Cloud Certitude </span></strong>. All
+                Rights Reserved
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-info">
+                            <!-- <h3>Cloud Certitude</h3> -->
+
+                            <img src="assets/img/cloudlogo.png" alt="" style="width: 150px" />
+                            <p>
+                                <br />
+                                DG-B-1704&05, 17th Floor, Emaar Digital Green, Golf course
+                                Extn. Road, Sectore-62, Gurugram. Haryana 122004 <br /><br />
+                                <strong>Phone:</strong> +91 124 6080 102<br />
+                                <strong>Email:</strong><a href="mailto:info@cloudcertitude.com"
+                                    style="color: #f0ffff; padding-left:5px ">info@cloudcertitude.com</a> <br />
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="https://twitter.com/cloudcertitude" target="_blank" class="twitter"><i
+                                        class="bx bxl-twitter"></i></a>
+                                <a href="https://www.facebook.com/cloudcertitude" target="_blank" class="facebook"><i
+                                        class="bx bxl-facebook"></i></a>
+                                <a href="https://www.instagram.com/cloud_certitude/" target="_blank"
+                                    class="instagram"><i class="bx bxl-instagram"></i></a>
+                                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                                <a href="https://www.linkedin.com/company/cloudcertitude/" class="linkedin"
+                                    target="_blank"><i class="bx bxl-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-links" style="padding-left: 6.5vw">
+                        <div>
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li>
+                                    <i class="bx bx-chevron-right"></i> <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <i class="bx bx-chevron-right"></i> <a href="./index.html#about">About us</a>
+                                </li>
+
+                                <li>
+                                    <i class="bx bx-chevron-right"></i>
+                                    <a href="TermPolicy.html">Terms of service</a>
+                                </li>
+                                <li>
+                                    <i class="bx bx-chevron-right"></i>
+                                    <a href="PrivacyPolicy.html">Privacy policy</a>
+                                </li>
+                                <li>
+                                    <i class="bx bx-chevron-right"></i>
+                                    <a href="SafeHarbour.html">Safe Harbour</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-lg-3 col-md-6 footer-links">
+                      <h4>Our Services</h4>
+                      <ul>
+                        <li>
+                          <i class="bx bx-chevron-right"></i>
+                          <a href="#">Salesforce Consulting</a>
+                        </li>
+                        <li>
+                          <i class="bx bx-chevron-right"></i>
+                          <a href="#">Salesforce Development</a>
+                        </li>
+                        <li>
+                          <i class="bx bx-chevron-right"></i>
+                          <a href="#"> Salesforce Support</a>
+                        </li>
+                        <li>
+                          <i class="bx bx-chevron-right"></i>
+                          <a href="#">Web Development</a>
+                        </li>
+                        <li>
+                          <i class="bx bx-chevron-right"></i> <a href="#">Web Design</a>
+                        </li>
+                      </ul>
+                    </div> -->
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Salesforce appexchange</h4>
+                        <table>
+                            <tr>
+                                <td style="padding: 5px">
+                                    <img src="assets/img/f1.png" style="height: 100px; width: 100px" />
+                                </td>
+                                <td style="padding: 5px">
+                                    <img src="assets/img/f2.png" style="height: 100px; width: 100px" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px">
+                                    <img src="assets/img/f3.png" style="height: 100px; width: 100px" />
+                                </td>
+                                <td style="padding: 5px">
+                                    <img src="assets/img/f4.jpg" style="height: 100px; width: 100px" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Cloud Certitude </span></strong>. All
+                Rights Reserved
+            </div>
+        </div>
+    </footer>
     <!-- End Footer -->
 
     <div id="preloader"></div>
@@ -603,34 +792,6 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $(".customer-logos").slick({
-                slidesToShow: 6,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 500,
-                arrows: false,
-                dots: false,
-                pauseOnHover: false,
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 4,
-                        },
-                    },
-                    {
-                        breakpoint: 520,
-                        settings: {
-                            slidesToShow: 3,
-                        },
-                    },
-                ],
-            });
-        });
-    </script>
 </body>
 
 </html>
