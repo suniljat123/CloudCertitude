@@ -300,7 +300,8 @@
       <h2>Grow your business and boost your productivity with our De Dupe Tool Product</h2>
       <div class="d-flex">
         <!-- <a class="btn-get-started scrollto" data-bs-target="#staticBackdrop">Get Package</a>  -->
-        <button type="button" class="btn-get-started scrollto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <button type="button" class="btn-get-started scrollto" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+          onclick="showFirstModal()">
           Get Package
         </button>
         <!-- <a href="#" class="btn-get-started scrollto">Why Choose Us</a>     -->
@@ -1073,6 +1074,14 @@
     }
     function closeallbackdrop() {
       document.querySelectorAll(".modal-backdrop").forEach(el => el.remove());
+      document.getElementById("first_name").value = ''
+      document.getElementById("last_name").value = ''
+      document.getElementById("company").value = ''
+      document.getElementById("email").value = ''
+      document.getElementById("phone").value = ''
+    }
+    function showFirstModal() {
+      $("#staticBackdrop").modal("show");
     }
   </script>
 </body>
