@@ -1104,6 +1104,10 @@
         .then(response => response.json())
         .then(result => {
           console.log('Myresult=', result)
+          document.getElementById('name').value = ''
+          document.getElementById('Company').value = ''
+          document.getElementById('Message').value = ''
+          document.getElementById('email').value = ''
 
         })
         .catch(error => console.log('error', error));
