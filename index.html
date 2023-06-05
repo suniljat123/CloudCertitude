@@ -950,6 +950,13 @@
   <!-- End #main -->
 
   <!-- ======= Footer ======= -->
+  <div style="position: fixed;bottom: 60px;right: 10px;z-index: 36;" class="Whatsapp d-none" id="whatsapp_logo">
+    <a href="https://wa.me/918390188805?text=hiiiCloud" target="_blank"> <img src="./assets/img/Whatsapp_Logo.png"
+        alt="Whatsapp_Logo" style="width: 50px;"></a>
+
+    <!-- <i class="bi bi-whatsapp" style="color: #198754; font-size: 40px;"></i> -->
+
+  </div>
   <footer id="footer" class="footer">
 
     <div class="container">
@@ -1032,8 +1039,9 @@
   <!-- End Footer -->
 
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i>
+  </a>
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -1054,7 +1062,20 @@
   <script src="assets/js/main.js"></script>
 
   <script>
+    addEventListener('scroll', () => {
 
+      var scroll = $(window).scrollTop();
+
+      if (scroll > 100) {
+        $('#whatsapp_logo').removeClass("d-none");
+        $('#whatsapp_logo').addClass("d-block");
+      }
+      else {
+        $('#whatsapp_logo').removeClass("d-block");
+        $('#whatsapp_logo').addClass("d-none");
+      }
+
+    });
     $(document).ready(function () {
 
       $(".customer-logos").slick({
