@@ -639,6 +639,7 @@ class Whatsapp_Chat extends HTMLElement {
   </div>`;
   }
 }
+
 customElements.define("app-whatsapp", Whatsapp_Chat);
 customElements.define("app-header", AllNavbar);
 customElements.define("app-navbar", Navbar);
