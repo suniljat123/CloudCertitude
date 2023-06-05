@@ -627,6 +627,19 @@ class AllNavbar extends HTMLElement {
   </header> `;
   }
 }
+class Whatsapp_Chat extends HTMLElement {
+  constructor() {
+    super();
+    this.innerHTML = ` <div style="position: fixed;bottom: 60px;right: 10px;z-index: 36;" class="Whatsapp d-none" id="whatsapp_logo">
+    <a href="https://wa.me/918390188805" target="_blank"> <img src="./assets/img/Whatsapp_Logo.png" alt="Whatsapp_Logo"
+        style="width: 50px;"></a>
+
+    <!-- <i class="bi bi-whatsapp" style="color: #198754; font-size: 40px;"></i> -->
+
+  </div>`;
+  }
+}
+customElements.define("app-whatsapp", Whatsapp_Chat);
 customElements.define("app-header", AllNavbar);
 customElements.define("app-navbar", Navbar);
 customElements.define("app-testimonials", Testimonials);
