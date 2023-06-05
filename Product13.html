@@ -509,8 +509,6 @@
           let atTheRateIndex = result.indexOf("@");
           let createdDate = result.substring(0, atTheRateIndex);
           let LastModifiedDate = result.substring(atTheRateIndex + 1, result.length);
-          console.log('CreatedDate=', createdDate)
-          console.log('LastModifiedDate=', LastModifiedDate)
           document.getElementById('firstVersion').innerHTML = createdDate
           document.getElementById('lastVersion').innerHTML = LastModifiedDate
 

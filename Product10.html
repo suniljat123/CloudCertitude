@@ -242,11 +242,12 @@
                     winter 2023
                   </li>
                   <li>
-                    <i class="ri-check-double-line"></i><span style="font-weight: 600;">First Release: </span>01/05/2023
+                    <i class="ri-check-double-line"></i><span style="font-weight: 600;">First Release: </span> <span
+                      id="firstVersion">01/05/2023</span>
                   </li>
                   <li>
-                    <i class="ri-check-double-line"></i><span style="font-weight: 600;">Latest Release:
-                    </span>01/05/2023
+                    <i class="ri-check-double-line"></i><span style="font-weight: 600;">Latest Release: </span>
+                    <span id='lastVersion'>01/05/2023</span>
                   </li>
                 </ul>
 
@@ -522,7 +523,12 @@
       fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
-          console.log(result)
+          let atTheRateIndex = result.indexOf("@");
+          let createdDate = result.substring(0, atTheRateIndex);
+          let LastModifiedDate = result.substring(atTheRateIndex + 1, result.length);
+          document.getElementById('firstVersion').innerHTML = createdDate
+          document.getElementById('lastVersion').innerHTML = LastModifiedDate
+
         })
         .catch(error => console.log('error', error));
 
