@@ -60,6 +60,7 @@ class Footer extends HTMLElement {
                 class="bi bi-instagram"></i></a>
             <a href="https://www.linkedin.com/company/cloudcertitude/" class="linkedin" target="_blank"><i
                 class="bi bi-linkedin"></i></a>
+                <a href="https://join.skype.com/invite/a21730WhsqCt" target="_blank" class="google-plus"><i class="bx bxl-skype"></i></a>
           </div>
         </div>
 
@@ -630,6 +631,34 @@ class AllNavbar extends HTMLElement {
 class Whatsapp_Chat extends HTMLElement {
   constructor() {
     super();
+    this.innerHTML = ` <div style="position: fixed;bottom: 60px;right: 10px;z-index: 36;" class="Whatsapp d-block" id="whatsapp_logo">
+    <a href="https://wa.me/918390188805" target="_blank"> <img src="./assets/img/Whatsapp_Logo.png" alt="Whatsapp_Logo"
+        style="width: 50px;"></a>
+
+    <!-- <i class="bi bi-whatsapp" style="color: #198754; font-size: 40px;"></i> -->
+
+  </div>
+  <script>
+    addEventListener('scroll', () => {
+
+      var scroll = $(window).scrollTop();
+
+      if (scroll > 100) {
+        $('#whatsapp_logo').removeClass("d-none");
+        $('#whatsapp_logo').addClass("d-block");
+      }
+      else {
+        $('#whatsapp_logo').removeClass("d-block");
+        $('#whatsapp_logo').addClass("d-none");
+      }
+
+    });
+    </script>`;
+  }
+}
+class Whatsapp_Chat_Index extends HTMLElement {
+  constructor() {
+    super();
     this.innerHTML = ` <div style="position: fixed;bottom: 60px;right: 10px;z-index: 36;" class="Whatsapp d-none" id="whatsapp_logo">
     <a href="https://wa.me/918390188805" target="_blank"> <img src="./assets/img/Whatsapp_Logo.png" alt="Whatsapp_Logo"
         style="width: 50px;"></a>
@@ -639,7 +668,7 @@ class Whatsapp_Chat extends HTMLElement {
   </div>`;
   }
 }
-
+customElements.define("app-whatsapp1", Whatsapp_Chat_Index);
 customElements.define("app-whatsapp", Whatsapp_Chat);
 customElements.define("app-header", AllNavbar);
 customElements.define("app-navbar", Navbar);
