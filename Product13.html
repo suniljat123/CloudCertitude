@@ -507,7 +507,7 @@
           console.log(result)
           let atTheRateIndex = result.indexOf("@");
           let createdDate = result.substring(0, atTheRateIndex);
-          let LastModifiedDate = result.substring(d.indexOf('@') + 1, d.length);
+          let LastModifiedDate = result.substring(atTheRateIndex + 1, result.length);
           console.log('CreatedDate=', createdDate)
           console.log('LastModifiedDate=', LastModifiedDate)
 
