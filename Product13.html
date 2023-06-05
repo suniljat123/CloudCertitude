@@ -505,6 +505,12 @@
         .then(response => response.json())
         .then(result => {
           console.log(result)
+          let atTheRateIndex = result.indexOf("@");
+          let createdDate = result.substring(0, atTheRateIndex);
+          let LastModifiedDate = result.substring(d.indexOf('@') + 1, d.length);
+          console.log('CreatedDate=', createdDate)
+          console.log('LastModifiedDate=', LastModifiedDate)
+
         })
         .catch(error => console.log('error', error));
 
