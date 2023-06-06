@@ -368,7 +368,7 @@ class Navbar extends HTMLElement {
               <li><a href="#about">About us</a></li>
               <li><a href="#team">Leadership</a></li>
               <li><a href="#testimonials">Testimonials</a></li>
-              <li><a href="#">Careers</a></li>
+              <li><a href="Carrer.html">Careers</a></li>
               <li><a href="CaseStudy.html">Case Study</a></li>
               <li><a href="Contact.html">Contact us</a></li>
             </ul>
@@ -611,7 +611,7 @@ class AllNavbar extends HTMLElement {
               <li><a href="./index.html#about">About us</a></li>
               <li><a href="./index.html#team">Leadership</a></li>
               <li><a href="#testimonials">Testimonials</a></li>
-              <li><a href="index.html">Careers</a></li>
+              <li><a href="Carrer.html">Careers</a></li>
               <li><a href="index.html">Case Study</a></li>
               <li><a href="Contact.html">Contact us</a></li>
             </ul>
@@ -631,7 +631,7 @@ class AllNavbar extends HTMLElement {
 class Whatsapp_Chat extends HTMLElement {
   constructor() {
     super();
-    this.innerHTML = ` <div style="position: fixed;bottom: 60px;right: 10px;z-index: 36;" class="Whatsapp d-block" id="whatsapp_logo">
+    this.innerHTML = ` <div style="position: fixed;bottom: 60px;right: 10px;z-index: 36;" class="Whatsapp d-none" id="whatsapp_logo">
     <a href="https://wa.me/918390188805" target="_blank"> <img src="./assets/img/Whatsapp_Logo.png" alt="Whatsapp_Logo"
         style="width: 50px;"></a>
 
@@ -656,19 +656,7 @@ class Whatsapp_Chat extends HTMLElement {
     </script>`;
   }
 }
-class Whatsapp_Chat_Index extends HTMLElement {
-  constructor() {
-    super();
-    this.innerHTML = ` <div style="position: fixed;bottom: 60px;right: 10px;z-index: 36;" class="Whatsapp d-none" id="whatsapp_logo">
-    <a href="https://wa.me/918390188805" target="_blank"> <img src="./assets/img/Whatsapp_Logo.png" alt="Whatsapp_Logo"
-        style="width: 50px;"></a>
 
-    <!-- <i class="bi bi-whatsapp" style="color: #198754; font-size: 40px;"></i> -->
-
-  </div>`;
-  }
-}
-customElements.define("app-whatsapp1", Whatsapp_Chat_Index);
 customElements.define("app-whatsapp", Whatsapp_Chat);
 customElements.define("app-header", AllNavbar);
 customElements.define("app-navbar", Navbar);
