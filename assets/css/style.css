@@ -14,14 +14,14 @@
 .HrEmail {
   color: #2f363f;
 
-  -webkit-transition: 0.4s;
+  transition: 0.4s;
   transition-timing-function: ease;
 }
 .HrEmail:hover {
   color: rgb(54, 85, 240);
 
   font-size: 19px;
-  -webkit-transition: 0.4s;
+  transition: 0.4s;
   transition-timing-function: ease;
 }
 
