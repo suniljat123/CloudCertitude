@@ -192,7 +192,7 @@ class Navbar extends HTMLElement {
                 <li class="ServiceLi"><a href="SalesforcePardot.html">Salesforce Pardot</a></li>
                 <li class="ServiceLi"><a href="CommunityCloud.html">Community Cloud</a></li>
                 <li class="ServiceLi"><a href="HealthCloud.html">Health Cloud</a></li>
-                <br />
+               
                 <ol style="color: black; font-weight: bold; padding-left: 13px">
                   Migration
                 </ol>
@@ -223,7 +223,7 @@ class Navbar extends HTMLElement {
                 <li class="ServiceLi">
                   <a href="SalesforceConfiguration.html">Salesforce Configuration</a>
                 </li>
-                <br />
+                
                 <ol style="color: black; font-weight: bold; padding-left: 13px">
                   Support
                 </ol>
@@ -424,7 +424,6 @@ class AllNavbar extends HTMLElement {
                 <li class="ServiceLi"><a href="SalesforcePardot.html">Salesforce Pardot</a></li>
                 <li class="ServiceLi"><a href="EducationCloud.html">Education Cloud</a></li>
                 <li class="ServiceLi"><a href="HealthCloud.html">Health Cloud</a></li>
-                <br />
                 <ol style="color: black; font-weight: bold; padding-left: 13px">
                   Migration
                 </ol>
@@ -455,7 +454,7 @@ class AllNavbar extends HTMLElement {
                 <li class="ServiceLi">
                   <a href="SalesforceConfiguration.html">Salesforce Configuration</a>
                 </li>
-                <br />
+                
                 <ol style="color: black; font-weight: bold; padding-left: 13px">
                   Support
                 </ol>
