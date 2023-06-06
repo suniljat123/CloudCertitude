@@ -139,7 +139,7 @@
 }
 .navbar .dropdown:hover > .serviceMenu {
   opacity: 1;
-  top: 143%;
+  /* top: 143%; */
   padding-right: 1.2rem;
   /* visibility: visible; */
   /* left: 30%; */
@@ -838,11 +838,11 @@ h6 {
 @media only screen and (max-width: 1114px) and (min-width: 989px) {
   .navbar .dropdown:hover > .serviceMenu {
     opacity: 1;
-    top: 143%;
-    visibility: visible;
+    /* top: 143%; */
+    /* visibility: visible; */
     /* left: 30%; */
-    margin: auto;
-    transform: translateX(-35%);
+    /* margin: auto; */
+    /* transform: translateX(-35%); */
   }
   .navbar .dropdown ul a {
     padding: 10px 13px;
