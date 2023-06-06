@@ -501,40 +501,39 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 
   <!-- Template Main JS File -->
-  script>
+  <script>
 
-  $(document).ready(function () {
-  var myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-  myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1;
-  LSKey-c$CookieConsentPolicy=0:1");
+    $(document).ready(function () {
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
 
-  var raw = JSON.stringify({
+      var raw = JSON.stringify({
 
-  "getVersionData": "getVersionData",
-  "MyPackageId": document.getElementById('hero').dataset.cutsomVals,
-  });
+        "getVersionData": "getVersionData",
+        "MyPackageId": document.getElementById('hero').dataset.cutsomVals,
+      });
 
-  var requestOptions = {
-  method: 'POST',
-  headers: myHeaders,
-  body: raw,
-  redirect: 'follow'
-  };
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
 
-  fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
-  .then(response => response.json())
-  .then(result => {
-  let atTheRateIndex = result.indexOf("@");
-  let createdDate = result.substring(0, atTheRateIndex);
-  let LastModifiedDate = result.substring(atTheRateIndex + 1, result.length);
-  document.getElementById('firstVersion').innerHTML = createdDate
-  document.getElementById('lastVersion').innerHTML = LastModifiedDate
+      fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
+        .then(response => response.json())
+        .then(result => {
+          let atTheRateIndex = result.indexOf("@");
+          let createdDate = result.substring(0, atTheRateIndex);
+          let LastModifiedDate = result.substring(atTheRateIndex + 1, result.length);
+          document.getElementById('firstVersion').innerHTML = createdDate
+          document.getElementById('lastVersion').innerHTML = LastModifiedDate
 
-  })
-  .catch(error => console.log('error', error));
+        })
+        .catch(error => console.log('error', error));
 
-  })
+    })
   </script>
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/MyComponents.js"></script>
