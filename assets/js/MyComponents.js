@@ -631,7 +631,7 @@ class AllNavbar extends HTMLElement {
 class Whatsapp_Chat extends HTMLElement {
   constructor() {
     super();
-    this.innerHTML = ` <div style="position: fixed;bottom: 60px;right: 10px;z-index: 36;" class="Whatsapp d-none" id="whatsapp_logo">
+    this.innerHTML = ` <div style="position: fixed;bottom: 10px;z-index: 36;right: 22px;" class="Whatsapp d-block" id="whatsapp_logo">
     <a href="https://wa.me/918390188805" target="_blank"> <img src="./assets/img/Whatsapp_Logo.png" alt="Whatsapp_Logo"
         style="width: 50px;"></a>
 

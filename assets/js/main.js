@@ -175,11 +175,9 @@
     var scroll = $(window).scrollTop();
 
     if (scroll > 100) {
-      $("#whatsapp_logo").removeClass("d-none");
-      $("#whatsapp_logo").addClass("d-block");
+      document.getElementById("whatsapp_logo").style.bottom = "60px";
     } else {
-      $("#whatsapp_logo").removeClass("d-block");
-      $("#whatsapp_logo").addClass("d-none");
+      document.getElementById("whatsapp_logo").style.bottom = "10px";
     }
   });
   /**
