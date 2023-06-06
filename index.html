@@ -621,18 +621,21 @@
             <form class="php-email-form" onsubmit="createRequestLead()">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required
+                    onkeyup="validateForm()" />
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required
+                    onkeyup="validateForm()" />
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="Company" id="Company" placeholder="Company" required />
+                <input type="text" class="form-control" name="Company" id="Company" placeholder="Company" required
+                  onkeyup="validateForm()" />
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" id="Message"
-                  required></textarea>
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" id="Message" required
+                  onkeyup="validateForm()"></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
@@ -683,6 +686,12 @@
   <script src="assets/js/MyComponents.js"></script>
 
   <script>
+    function validateForm() {
+      let fname = event.target.value
+      fname = fname.trimStart()
+      event.target.value = fname
+
+    }
 
     $(document).ready(function () {
 
