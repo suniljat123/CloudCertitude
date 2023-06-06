@@ -11,7 +11,14 @@
 
 --------------------------------------------------------------*/
 /* / Custom Css / */
-
+.HrEmail {
+  color: #2f363f;
+}
+.HrEmail:hover {
+  color: rgb(54, 85, 240);
+  /* font-size: large; */
+  font-size: 19px;
+}
 .dropDownServiceMobile {
   display: none !important;
 }
