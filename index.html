@@ -751,19 +751,11 @@
       let Company = document.getElementById('Company').value
       let Message = document.getElementById('Message').value
       let Email = document.getElementById('email').value
-      console.log('fname=', fname.length)
-      console.log('Company=', Company.length)
-      console.log('Email=', Email.length)
-      console.log('Message=', Message.length)
-      //f
+
       fname = fname.trim()
       Email = Email.trim()
       Message = Message.trim()
       Company = Company.trim()
-      console.log('fname=', fname.length)
-      console.log('Company=', Company.length)
-      console.log('Email=', Email.length)
-      console.log('Message=', Message.length)
 
 
       toast = document.querySelector(".toast")
@@ -796,31 +788,29 @@
           document.getElementById('Company').value = ''
           document.getElementById('Message').value = ''
           document.getElementById('email').value = ''
-          if (result != "" || result != null) {
-            toast.classList.add("active");
-            progress.classList.add("active");
+          toast.classList.add("active");
+          progress.classList.add("active");
 
-            timer1 = setTimeout(() => {
-              toast.classList.remove("active");
-            }, 5000); //1s = 1000 milliseconds
+          timer1 = setTimeout(() => {
+            toast.classList.remove("active");
+          }, 5000); //1s = 1000 milliseconds
 
-            timer2 = setTimeout(() => {
+          timer2 = setTimeout(() => {
+            progress.classList.remove("active");
+          }, 5300);
+
+          closeIcon.addEventListener("click", () => {
+            toast.classList.remove("active");
+
+            setTimeout(() => {
               progress.classList.remove("active");
-            }, 5300);
+            }, 300);
 
-            closeIcon.addEventListener("click", () => {
-              toast.classList.remove("active");
-
-              setTimeout(() => {
-                progress.classList.remove("active");
-              }, 300);
-
-              clearTimeout(timer1);
-              clearTimeout(timer2);
-            });
+            clearTimeout(timer1);
+            clearTimeout(timer2);
+          });
 
 
-          }
         })
         .catch(error => console.log('error', error));
     }
