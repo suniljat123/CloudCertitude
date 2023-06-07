@@ -43,6 +43,19 @@
 </head>
 
 <body>
+  <div class="toast">
+    <div class="toast-content">
+      <i class="fas fa-solid fa-check check"></i>
+
+      <div class="message">
+        <span class="text text-1">Success</span>
+        <span class="text text-2">Your changes has been saved</span>
+      </div>
+    </div>
+    <i class="fa-solid fa-xmark close"></i>
+
+    <div class="progress"></div>
+  </div>
   <!-- ======= Header ======= -->
   <!-- ======= Header ======= -->
   <app-navbar></app-navbar>
@@ -751,6 +764,11 @@
       console.log('Company=', Company.length)
       console.log('Email=', Email.length)
       console.log('Message=', Message.length)
+
+
+      toast = document.querySelector(".toast")
+      closeIcon = document.querySelector(".close"),
+        progress = document.querySelector(".progress");
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
@@ -778,7 +796,31 @@
           document.getElementById('Company').value = ''
           document.getElementById('Message').value = ''
           document.getElementById('email').value = ''
+          if (result != "" || result != null) {
+            toast.classList.add("active");
+            progress.classList.add("active");
 
+            timer1 = setTimeout(() => {
+              toast.classList.remove("active");
+            }, 5000); //1s = 1000 milliseconds
+
+            timer2 = setTimeout(() => {
+              progress.classList.remove("active");
+            }, 5300);
+
+            closeIcon.addEventListener("click", () => {
+              toast.classList.remove("active");
+
+              setTimeout(() => {
+                progress.classList.remove("active");
+              }, 300);
+
+              clearTimeout(timer1);
+              clearTimeout(timer2);
+            });
+
+
+          }
         })
         .catch(error => console.log('error', error));
     }
