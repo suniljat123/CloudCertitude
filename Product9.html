@@ -59,7 +59,7 @@
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" style="background-image: url(./assets/img/massDmlmain.jpg);" data-cutsom-vals="a1a3j000009wRGvAAM">
+  <section id="hero" style="background-image: url(./assets/img/massDmlmain.jpg);" data-cutsom-vals="a1f0r000000Yy8tAAC">
     <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
       <h1>Mass DML</h1>
       <h2>Grow your business and boost your productivity with our Mass DML Product</h2>
@@ -491,7 +491,6 @@
   <script>
 
     $(document).ready(function () {
-
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
@@ -508,11 +507,10 @@
         body: raw,
         redirect: 'follow'
       };
-      //    https://cloudie.my.salesforce-sites.com/InternalApps
+
       fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
-
           let atTheRateIndex = result.indexOf("@");
           let createdDate = result.substring(0, atTheRateIndex);
           let LastModifiedDate = result.substring(atTheRateIndex + 1, result.length);
@@ -524,6 +522,9 @@
 
     })
   </script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/MyComponents.js"></script>
+
   <script type="text/javascript">
     var EmailOtp = 0;
     function verifyOtp() {
@@ -569,7 +570,7 @@
       }
     }
     function sendOtp() {
-      removeSpaceFromLeadForm()
+
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
@@ -593,7 +594,6 @@
       fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
-
           EmailOtp = result
 
         })
