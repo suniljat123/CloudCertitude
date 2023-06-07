@@ -189,8 +189,8 @@ class Navbar extends HTMLElement {
                   <a href="FinancialCloud.html">Financial services Cloud</a>
                 </li>
                 <li class="ServiceLi"><a href="NonProfitCloud.html">Non-Profit Cloud</a></li>
-                <li class="ServiceLi"><a href="SalesforcePardot.html">Salesforce Pardot</a></li>
-                <li class="ServiceLi"><a href="CommunityCloud.html">Community Cloud</a></li>
+                <li class="ServiceLi"><a href="SalesforcePardot.html">Salesforce Pardot</a></li> 
+                      <li class="ServiceLi"><a href="EducationCloud.html">Education Cloud</a></li>
                 <li class="ServiceLi"><a href="HealthCloud.html">Health Cloud</a></li>
                
                 <ol style="color: black; font-weight: bold; padding-left: 13px">
@@ -291,7 +291,7 @@ class Navbar extends HTMLElement {
                   <li><a href="FinancialCloud.html">Financial services Cloud</a></li>
                   <li><a href="NonProfitCloud.html">Non-Profit Cloud</a></li>
                   <li><a href="SalesforcePardot.html">Salesforce Pardot</a></li>
-                  <li><a href="CommunityCloud.html">Community Cloud</a></li>
+                  <li><a href="EducationCloud.html">Education Cloud</a></li>
                   <li><a href="HealthCloud.html">Health Cloud</a></li>
                 </ul>
               </li>
