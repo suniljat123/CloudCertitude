@@ -497,7 +497,7 @@
   <script>
 
     $(document).ready(function () {
-      console.log('ready')
+
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
@@ -518,7 +518,7 @@
       fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
-          console.log('result=', result)
+
           let atTheRateIndex = result.indexOf("@");
           let createdDate = result.substring(0, atTheRateIndex);
           let LastModifiedDate = result.substring(atTheRateIndex + 1, result.length);
@@ -561,9 +561,9 @@
           .then(response => response.json())
           .then(result => {
             EmailOtp = result
-            console.log('url=', result)
+
             window.open(result, '_blank')
-            //  window.location.reload();
+            window.location.reload();
           })
           .catch(error => console.log('error', error));
 
@@ -599,7 +599,7 @@
       fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
-          console.log('otp=', result)
+
           EmailOtp = result
 
         })

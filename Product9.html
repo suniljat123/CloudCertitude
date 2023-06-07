@@ -491,6 +491,7 @@
   <script>
 
     $(document).ready(function () {
+
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
@@ -507,10 +508,11 @@
         body: raw,
         redirect: 'follow'
       };
-
-      fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
+      //    https://cloudie.my.salesforce-sites.com/InternalApps
+      fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
+
           let atTheRateIndex = result.indexOf("@");
           let createdDate = result.substring(0, atTheRateIndex);
           let LastModifiedDate = result.substring(atTheRateIndex + 1, result.length);
@@ -522,9 +524,6 @@
 
     })
   </script>
-  <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/MyComponents.js"></script>
-
   <script type="text/javascript">
     var EmailOtp = 0;
     function verifyOtp() {
@@ -552,7 +551,7 @@
           redirect: 'follow'
         };
 
-        fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
+        fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
           .then(response => response.json())
           .then(result => {
             EmailOtp = result
@@ -591,9 +590,10 @@
         redirect: 'follow'
       };
 
-      fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
+      fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
+
           EmailOtp = result
 
         })
