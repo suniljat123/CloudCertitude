@@ -688,6 +688,9 @@
   <script>
     function validateForm() {
       let length = event.target.value.length
+      let email = document.getElementById('email').value
+      email = email.trim()
+      document.getElementById('email').value = email
       console.log(event.target.value[length - 1])
       if (event.target.value[length - 1] === ' ') {
         let value = event.target.value;
