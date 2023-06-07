@@ -62,7 +62,7 @@
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" style="background-image: url(./assets/img/Dedupemain.jpg);" data-cutsom-vals="a1f0r000000Yy8yAAC">
+  <section id="hero" style="background-image: url(./assets/img/Dedupemain.jpg);" data-cutsom-vals="a1a3j000009wRGwAAM">
     <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
       <h1>De Dupe Tool</h1>
       <h2>Grow your business and boost your productivity with our De Dupe Tool Product</h2>
@@ -513,10 +513,11 @@
         body: raw,
         redirect: 'follow'
       };
-
-      fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
+      //    https://cloudie.my.salesforce-sites.com/InternalApps
+      fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
+          console.log('result=', result)
           let atTheRateIndex = result.indexOf("@");
           let createdDate = result.substring(0, atTheRateIndex);
           let LastModifiedDate = result.substring(atTheRateIndex + 1, result.length);
