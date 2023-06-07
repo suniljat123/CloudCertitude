@@ -556,7 +556,7 @@
           redirect: 'follow'
         };
 
-        fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
+        fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
           .then(response => response.json())
           .then(result => {
             EmailOtp = result
@@ -595,7 +595,7 @@
         redirect: 'follow'
       };
 
-      fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
+      fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
           EmailOtp = result
