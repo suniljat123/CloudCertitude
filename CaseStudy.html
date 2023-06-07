@@ -869,18 +869,12 @@
 
     }
     function downloadFile() {
-      console.log('hello send=', myfile)
-      console.log('hii')
       var fileName = myfile;//document.getElementById("filename").value; // Get the file name from HTML input
-
       var filePath = "assets/CaseStudy/" + fileName; // Construct the file path
       filePath = filePath + '.pdf'
       var link = document.createElement("a");
       link.href = filePath;
       link.download = fileName;
-
-      console.log('finemane=', filePath)
-      console.log('link=', link)
       link.click();
       myfile = ''
     }
