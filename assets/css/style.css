@@ -11,6 +11,9 @@
 
 --------------------------------------------------------------*/
 /* / Custom Css / */
+.SignSpan {
+  margin-left: 0px !important;
+}
 .HrEmail {
   color: #2f363f;
 
@@ -648,10 +651,10 @@ section {
 .about .count-box span {
   font-size: 28px;
   line-height: 25px;
-  display: block;
+  /* display: block; */
   font-weight: 700;
   color: #365870;
-  margin-left: 60px;
+  margin-left: 11px;
 }
 
 .about .count-box p {
