@@ -43,19 +43,7 @@
 </head>
 
 <body>
-  <div class="toast">
-    <div class="toast-content">
-      <i class="fas fa-solid fa-check check"></i>
 
-      <div class="message">
-        <span class="text text-1">Success</span>
-        <span class="text text-2">Your changes has been saved</span>
-      </div>
-    </div>
-    <i class="fa-solid fa-xmark close"></i>
-
-    <div class="progress"></div>
-  </div>
   <!-- ======= Header ======= -->
   <!-- ======= Header ======= -->
   <app-navbar></app-navbar>
@@ -704,7 +692,6 @@
       let email = document.getElementById('email').value
       email = email.trim()
       document.getElementById('email').value = email
-      console.log(event.target.value[length - 1])
       if (event.target.value[length - 1] === ' ') {
         let value = event.target.value;
         value = value.trim();
@@ -715,6 +702,9 @@
       let fname = event.target.value;
       fname = fname.trimStart();
       event.target.value = fname;
+      let str = 'Sun     il'
+      str = str.replace("\\s+", " ").trim()
+      console.log('name=', str)
 
     }
 
@@ -751,16 +741,14 @@
       let Company = document.getElementById('Company').value
       let Message = document.getElementById('Message').value
       let Email = document.getElementById('email').value
-
+      document.getElementById('name').value = ''
+      document.getElementById('Company').value = ''
+      document.getElementById('Message').value = ''
+      document.getElementById('email').value = ''
       fname = fname.trim()
       Email = Email.trim()
       Message = Message.trim()
       Company = Company.trim()
-
-
-      toast = document.querySelector(".toast")
-      closeIcon = document.querySelector(".close"),
-        progress = document.querySelector(".progress");
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
@@ -788,27 +776,7 @@
           document.getElementById('Company').value = ''
           document.getElementById('Message').value = ''
           document.getElementById('email').value = ''
-          toast.classList.add("active");
-          progress.classList.add("active");
 
-          timer1 = setTimeout(() => {
-            toast.classList.remove("active");
-          }, 5000); //1s = 1000 milliseconds
-
-          timer2 = setTimeout(() => {
-            progress.classList.remove("active");
-          }, 5300);
-
-          closeIcon.addEventListener("click", () => {
-            toast.classList.remove("active");
-
-            setTimeout(() => {
-              progress.classList.remove("active");
-            }, 300);
-
-            clearTimeout(timer1);
-            clearTimeout(timer2);
-          });
 
 
         })
