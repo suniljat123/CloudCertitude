@@ -61,7 +61,7 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" style="background-image: url(./assets/img/MassDownloadmain.png);"
-    data-cutsom-vals="a1a3j000009wRGsAAM">
+    data-cutsom-vals="a1fDy000000Z08QIAS">
     <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
       <h1>Mass Download</h1>
       <h2>Grow your business and boost your productivity with our Mass Download Product</h2>
@@ -496,7 +496,6 @@
   <script>
 
     $(document).ready(function () {
-
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
@@ -513,11 +512,10 @@
         body: raw,
         redirect: 'follow'
       };
-      //    https://cloudie.my.salesforce-sites.com/InternalApps
+
       fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
-
           let atTheRateIndex = result.indexOf("@");
           let createdDate = result.substring(0, atTheRateIndex);
           let LastModifiedDate = result.substring(atTheRateIndex + 1, result.length);
@@ -529,6 +527,8 @@
 
     })
   </script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/MyComponents.js"></script>
   <script type="text/javascript">
     var EmailOtp = 0;
     function verifyOtp() {
@@ -574,7 +574,7 @@
       }
     }
     function sendOtp() {
-      removeSpaceFromLeadForm()
+
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
@@ -598,7 +598,6 @@
       fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
-
           EmailOtp = result
 
         })
