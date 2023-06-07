@@ -11,6 +11,13 @@
 
 --------------------------------------------------------------*/
 /* / Custom Css / */
+.whyChoose {
+  font-size: 30px !important;
+}
+.section-title .whyChoose::after {
+  margin: 11px 10px !important;
+}
+
 .SignSpan {
   margin-left: 0px !important;
 }
@@ -556,7 +563,30 @@ h6 {
     background-attachment: fixed;
   }
 }
+@media only screen and (max-width: 294px) and (min-width: 200px) {
+  .about .count-box span {
+    font-size: 24px !important;
+  }
+}
 
+@media only screen and (max-width: 462px) and (min-width: 362px) {
+  .section-title .whyChoose::after {
+    margin: 8px 10px !important;
+    width: 60px !important;
+  }
+  .whyChoose {
+    font-size: 28px !important;
+  }
+}
+@media only screen and (max-width: 362px) and (min-width: 200px) {
+  .section-title .whyChoose::after {
+    margin: 6px 10px !important;
+    width: 40px !important;
+  }
+  .whyChoose {
+    font-size: 20px !important;
+  }
+}
 @media only screen and (max-width: 768px) and (min-width: 400px) {
   #hero h1 {
     font-size: 24px;
