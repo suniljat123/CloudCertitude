@@ -87,6 +87,7 @@ class Testimonials extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `  <section id="testimonials" class="testimonials">
+   
       <div class="container" data-aos="zoom-in">
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
