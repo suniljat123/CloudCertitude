@@ -687,6 +687,15 @@
 
   <script>
     function validateForm() {
+      let length = event.target.value.length
+      console.log(event.target.value[length - 1])
+      if (event.target.value[length - 1] === ' ') {
+        let value = event.target.value;
+        value = value.trim();
+        value = value + ' '
+        event.target.value = value;
+      }
+
       let fname = event.target.value;
       fname = fname.trimStart();
       event.target.value = fname;
