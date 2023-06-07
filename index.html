@@ -623,20 +623,20 @@
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required
-                    onkeyup="validateForm()" />
+                    onkeyup="validateForm()" onchange="removeExtraSpaces()" />
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required
-                    onchange="validateForm()" />
+                    onchange="removeExtraSpaces()" />
                 </div>
               </div>
               <div class="form-group mt-3">
                 <input type="text" class="form-control" name="Company" id="Company" placeholder="Company" required
-                  onkeyup="validateForm()" />
+                  onkeyup="validateForm()" onchange="removeExtraSpaces()" />
               </div>
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" id="Message" required
-                  onkeyup="validateForm()"></textarea>
+                  onkeyup="validateForm()" onchange="removeExtraSpaces()"></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
@@ -702,12 +702,26 @@
       let fname = event.target.value;
       fname = fname.trimStart();
       event.target.value = fname;
-      let str = 'Sun     il'
-      str = str.replace("\\s+", " ").trim()
-      console.log('name=', str)
+
 
     }
+    function removeExtraSpaces() {
+      let fname = document.getElementById('name').value
+      let Company = document.getElementById('Company').value
+      let Message = document.getElementById('Message').value
+      let Email = document.getElementById('email').value
 
+      fname = fname.replace(/\s+/g, ' ').trim()
+      Company = Company.replace(/\s+/g, ' ').trim()
+      Message = Message.replace(/\s+/g, ' ').trim()
+      Email = Email.replace(/\s+/g, ' ').trim()
+      document.getElementById('name').value = fname
+      document.getElementById('Company').value = Company
+      document.getElementById('Message').value = Message
+      document.getElementById('email').value = Email
+
+
+    }
     $(document).ready(function () {
 
       $(".customer-logos").slick({
