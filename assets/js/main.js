@@ -37,6 +37,7 @@
   /**
    * Easy on scroll event listener
    */
+
   const onscroll = (el, listener) => {
     el.addEventListener("scroll", listener);
   };
@@ -295,3 +296,21 @@
    */
   new PureCounter();
 })();
+function removeSpaceFromLeadForm() {
+  let lname = document.getElementById("last_name").value;
+  let fname = document.getElementById("first_name").value;
+  let company = document.getElementById("company").value;
+  let phone = document.getElementById("phone").value;
+  let email = document.getElementById("email").value;
+
+  fname = fname.replace(/\s+/g, " ").trim();
+  lname = lname.replace(/\s+/g, " ").trim();
+  company = company.replace(/\s+/g, " ").trim();
+  phone = phone.replace(/\s+/g, " ").trim();
+  email = email.replace(/\s+/g, " ").trim();
+  document.getElementById("first_name").value = fname;
+  document.getElementById("last_name").value = lname;
+  document.getElementById("company").value = company;
+  document.getElementById("phone").value = phone;
+  document.getElementById("email").value = email;
+}
