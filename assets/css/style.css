@@ -563,12 +563,25 @@ h6 {
     background-attachment: fixed;
   }
 }
-@media only screen and (max-width: 294px) and (min-width: 200px) {
+@media only screen and (max-width: 294px) {
   .about .count-box span {
     font-size: 24px !important;
   }
+  .about .count-box i {
+    font-size: 40px !important;
+  }
 }
-
+@media only screen and (max-width: 260px) and (min-width: 200px) {
+  .about .count-box span {
+    font-size: 15px !important;
+  }
+  .about .count-box i {
+    font-size: 35px !important;
+  }
+  .about .count-box p {
+    margin: 0 0 0 30px !important;
+  }
+}
 @media only screen and (max-width: 462px) and (min-width: 362px) {
   .section-title .whyChoose::after {
     margin: 8px 10px !important;
