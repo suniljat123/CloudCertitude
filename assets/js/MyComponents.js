@@ -364,7 +364,7 @@ class Navbar extends HTMLElement {
             <a class="nav-link scrollto" href="product.html">Our Product</a>
           </li>
           <li class="dropdown">
-            <a href="#about"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <a href="#About"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#about">About us</a></li>
               <li><a href="#team">Leadership</a></li>
@@ -606,7 +606,7 @@ class AllNavbar extends HTMLElement {
             <a class="nav-link scrollto" href="product.html">Our Product</a>
           </li>
           <li class="dropdown">
-            <a href="#about"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <a href="#About"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="./index.html#about">About us</a></li>
               <li><a href="./index.html#team">Leadership</a></li>
@@ -847,7 +847,7 @@ class ContactCareerNavbar extends HTMLElement {
             <a class="nav-link scrollto" href="product.html">Our Product</a>
           </li>
           <li class="dropdown">
-            <a href="#about"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <a href="#About"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="./index.html#about">About us</a></li>
               <li><a href="./index.html#team">Leadership</a></li>
