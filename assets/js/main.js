@@ -5,6 +5,7 @@
  * Author: BootstrapMade.com
  * License: https://bootstrapmade.com/license/
  */
+var EmailOtp = 0;
 (function () {
   "use strict";
 
@@ -518,5 +519,59 @@ function sendLead() {
     const modal2 = new bootstrap.Modal("#exampleModalToggle2");
     modal2.show();
     sendOtp();
+  }
+}
+
+function verifyOtp() {
+  console.log("verify=", EmailOtp);
+  if (
+    document.getElementById("otpValue").value === EmailOtp &&
+    document.getElementById("otpValue").value.length === 6
+  ) {
+    $("#otpValue").removeClass("is-invalid");
+    otpError.innerHTML = "";
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append(
+      "Cookie",
+      "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1"
+    );
+
+    var raw = JSON.stringify({
+      LastName: document.getElementById("last_name").value,
+      FirstName: document.getElementById("first_name").value,
+      Company: document.getElementById("company").value,
+      Phone: document.getElementById("phone").value,
+      Email: document.getElementById("email").value,
+      MyPackageId: document.getElementById("hero").dataset.cutsomVals,
+      InsertLead: "InsertLead",
+    });
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    fetch(
+      "https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata",
+      requestOptions
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        EmailOtp = result;
+
+        window.open(result, "_blank");
+        window.location.reload();
+        callToast();
+      })
+      .catch((error) => {
+        console.log("error", error);
+        callError();
+      });
+  } else {
+    $("#otpValue").addClass("is-invalid");
+    otpError.innerHTML = "Please enter correct OTP";
   }
 }
