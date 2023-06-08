@@ -366,5 +366,9 @@ function crossClicked() {
   document.getElementById("toastDiv").style.display = "none";
 }
 function navbarClosed() {
+  console.log(window.innerWidth);
+  if (window.innerWidth < 991) {
+    document.getElementById("crossBttn").click();
+  }
   // document.getElementById("crossBttn").click();
 }
