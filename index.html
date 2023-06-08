@@ -635,8 +635,12 @@
 
 
         })
-        .catch(error => console.log('error', error));
-      document.getElementById('submitButton').disabled = false
+        .catch(error => {
+          console.log('error', error)
+          callError()
+          document.getElementById('submitButton').disabled = false
+        });
+
     }
   </script>
 </body>

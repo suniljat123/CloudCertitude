@@ -551,8 +551,12 @@
 
             window.open(result, '_blank')
             window.location.reload();
+            callToast()
           })
-          .catch(error => console.log('error', error));
+          .catch(error => {
+            console.log('error', error)
+            callError()
+          });
 
       }
       else {

@@ -339,7 +339,6 @@ function callToast() {
   const toastDiv = document.getElementById("toastDiv");
   toastDiv.style.display = "flex";
   setTimeout(() => {
-    console;
     document.getElementById("successDiv").style.display = "none";
   }, 4000);
   const toastEement = document.getElementById("formendSuccess");

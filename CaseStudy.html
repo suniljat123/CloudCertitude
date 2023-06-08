@@ -865,10 +865,14 @@
           downloadFile();
 
         })
-        .catch(error => console.log('error', error));
+        .catch(error => {
+          console.log('error', error)
+          callError()
+        });
 
     }
     function downloadFile() {
+      callToast()
       var fileName = myfile;//document.getElementById("filename").value; // Get the file name from HTML input
       var filePath = "assets/CaseStudy/" + fileName; // Construct the file path
       filePath = filePath + '.pdf'
