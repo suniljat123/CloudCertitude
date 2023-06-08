@@ -365,3 +365,158 @@ function callError() {
 function crossClicked() {
   document.getElementById("toastDiv").style.display = "none";
 }
+function sendOtp() {
+  console.log("SendOtp");
+  removeSpaceFromLeadForm();
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+  myHeaders.append(
+    "Cookie",
+    "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1"
+  );
+
+  var raw = JSON.stringify({
+    LastName: document.getElementById("last_name").value,
+    FirstName: document.getElementById("first_name").value,
+    Company: document.getElementById("company").value,
+    Phone: document.getElementById("phone").value,
+    Email: document.getElementById("email").value,
+    SendOtp: "InsertLead",
+  });
+
+  var requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  };
+
+  fetch(
+    "https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata",
+    requestOptions
+  )
+    .then((response) => response.json())
+    .then((result) => {
+      EmailOtp = result;
+    })
+    .catch((error) => console.log("error", error));
+}
+function closeallbackdrop() {
+  document.querySelectorAll(".modal-backdrop").forEach((el) => el.remove());
+  document.getElementById("first_name").value = "";
+  document.getElementById("last_name").value = "";
+  document.getElementById("company").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("phone").value = "";
+}
+function showFirstModal() {
+  $("#staticBackdrop").modal("show");
+}
+window.addEventListener("input", function (evt) {
+  console.log("input");
+  fNameError = document.getElementById("fnameErr");
+  lNameError = document.getElementById("lnameErr");
+  phoneError = document.getElementById("phoneErr");
+  companyError = document.getElementById("companyErr");
+  emailError = document.getElementById("emailErr");
+  if (evt.target.id === "first_name") {
+    $("#first_name").removeClass("is-invalid");
+    fNameError.innerHTML = "";
+  } else if (evt.target.id === "last_name") {
+    $("#last_name").removeClass("is-invalid");
+    lNameError.innerHTML = "";
+  } else if (evt.target.id === "phone") {
+    $("#phone").removeClass("is-invalid");
+    phoneError.innerHTML = "";
+  } else if (evt.target.id === "company") {
+    $("#company").removeClass("is-invalid");
+    companyError.innerHTML = "";
+  } else if (evt.target.id === "email") {
+    $("#email").removeClass("is-invalid");
+    emailError.innerHTML = "";
+  } else if (evt.target.id === "otpValue") {
+    $("#otpValue").removeClass("is-invalid");
+    otpError.innerHTML = "";
+  }
+});
+
+function sendLead() {
+  console.log("SendLead");
+  let fname = document.getElementById("first_name").value;
+  fname = fname.trim();
+  let lname = document.getElementById("last_name").value;
+  lname = lname.trim();
+  let company = document.getElementById("company").value;
+  company = company.trim();
+  let email = document.getElementById("email").value;
+  email = email.trim();
+  let phone = document.getElementById("phone").value;
+  phone = phone.trim();
+  let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  fNameError = document.getElementById("fnameErr");
+  lNameError = document.getElementById("lnameErr");
+  phoneError = document.getElementById("phoneErr");
+  companyError = document.getElementById("companyErr");
+  emailError = document.getElementById("emailErr");
+  if (fname.length < 2) {
+    $("#first_name").addClass("is-invalid");
+    fNameError.innerHTML = "First Name must contains atleast 2 characters\r\n";
+  } else if (fname.length > 0 && $("#first_name").hasClass("is-invalid")) {
+    $("#first_name").removeClass("is-invalid");
+    fNameError.innerHTML = "";
+  }
+
+  if (lname.length < 2) {
+    $("#last_name").addClass("is-invalid");
+    lNameError.innerHTML = "Last Name must contains atleast 2 characters\r\n";
+  } else if (lname.length > 0 && $("#last_name").hasClass("is-invalid")) {
+    $("#last_name").removeClass("is-invalid");
+    lNameError.innerHTML = "";
+  }
+  //console.log(mailformat.test(document.getElementById("email").value));
+  if (
+    email.length < 1 ||
+    !mailformat.test(document.getElementById("email").value)
+  ) {
+    $("#email").addClass("is-invalid");
+    emailError.innerHTML = "Please Enter Correct Email\r\n";
+  } else if (
+    email.length > 0 &&
+    mailformat.test(document.getElementById("email").value)
+  ) {
+    $("#email").removeClass("is-invalid");
+    emailError.innerHTML = "";
+  }
+
+  if (phone.length !== 10) {
+    $("#phone").addClass("is-invalid");
+    phoneError.innerHTML = "Please Enter Correct Phone Number\r\n";
+  } else if (phone.length === 10 && $("#phone").hasClass("is-invalid")) {
+    $("#phone").removeClass("is-invalid");
+    phoneError.innerHTML = "";
+  }
+
+  if (company.length < 2) {
+    $("#company").addClass("is-invalid");
+    companyError.innerHTML =
+      "Company Name must contains atleast 2 characters\r\n";
+  } else if (company.length > 0 && $("#company").hasClass("is-invalid")) {
+    $("#company").removeClass("is-invalid");
+    companyError.innerHTML = "";
+  }
+
+  if (
+    !(
+      $("#company").hasClass("is-invalid") ||
+      $("#phone").hasClass("is-invalid") ||
+      $("#email").hasClass("is-invalid") ||
+      $("#last_name").hasClass("is-invalid") ||
+      $("#first_name").hasClass("is-invalid")
+    )
+  ) {
+    $("#staticBackdrop").modal("hide");
+    const modal2 = new bootstrap.Modal("#exampleModalToggle2");
+    modal2.show();
+    sendOtp();
+  }
+}
