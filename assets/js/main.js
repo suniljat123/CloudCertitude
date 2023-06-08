@@ -335,3 +335,34 @@ function removeSpaceFromLeadForm() {
   document.getElementById("phone").value = phone;
   document.getElementById("email").value = email;
 }
+function callToast() {
+  const toastDiv = document.getElementById("toastDiv");
+  toastDiv.style.display = "flex";
+  setTimeout(() => {
+    console;
+    document.getElementById("successDiv").style.display = "none";
+  }, 4000);
+  const toastEement = document.getElementById("formendSuccess");
+  const toastEl = new bootstrap.Toast(toastEement, {
+    animation: true,
+    delay: 4000,
+  });
+  toastEl.show();
+}
+function callError() {
+  const toastDiv = document.getElementById("toastDiv");
+  toastDiv.style.display = "flex";
+  setTimeout(() => {
+    console;
+    document.getElementById("toastDiv").style.display = "none";
+  }, 4000);
+  const toastEement = document.getElementById("formendError");
+  const toastEl = new bootstrap.Toast(toastEement, {
+    animation: true,
+    delay: 4000,
+  });
+  toastEl.show();
+}
+function crossClicked() {
+  document.getElementById("toastDiv").style.display = "none";
+}
