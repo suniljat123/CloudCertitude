@@ -149,6 +149,17 @@
         }); // Adjust the animation duration as needed
     }
   });
+  $('a[href^="#team"]').on("click", function (event) {
+    event.preventDefault();
+    var target = $(this.getAttribute("href"));
+    if (target.length) {
+      $("html, body")
+        .stop()
+        .animate({
+          scrollTop: target.offset().top - 85, // Adjust the offset value to match your navbar height /
+        }); // Adjust the animation duration as needed
+    }
+  });
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
