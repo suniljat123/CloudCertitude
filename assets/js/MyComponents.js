@@ -174,7 +174,7 @@ class Navbar extends HTMLElement {
           <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li>   -->
 
           <li class="dropdown dropDownServiceNormal">
-            <a href="#features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <a href="#Features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul class="serviceMenu" style="display: flex; align-items: normal !important">
               <div>
                 <ol style="color: black; font-weight: bold; padding-left: 13px">
@@ -278,7 +278,7 @@ class Navbar extends HTMLElement {
 
           <!-- for Mobile responsive navbar  -->
           <li class="dropdown dropDownServiceMobile">
-            <a href="#features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <a href="#Features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li class="dropdown">
                 <a href="#"><span>Implementation</span>
@@ -403,7 +403,7 @@ class AllNavbar extends HTMLElement {
           <!-- <li><a class="nav-link scrollto active" href="index.html">Home</a></li> -->
 
           <li class="dropdown dropDownServiceNormal">
-            <a href="#features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <a href="#Features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul class="serviceMenu" style="display: flex; align-items: normal !important">
               <div>
                 <ol style="color: black; font-weight: bold; padding-left: 13px">
@@ -509,7 +509,7 @@ class AllNavbar extends HTMLElement {
 
           <!-- for Mobile responsive navbar  -->
           <li class="dropdown dropDownServiceMobile">
-            <a href="#features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <a href="#Features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li class="dropdown">
                 <a href="#"><span>Implementation</span>
@@ -644,7 +644,7 @@ class ContactCareerNavbar extends HTMLElement {
           <!-- <li><a class="nav-link scrollto active" href="index.html">Home</a></li> -->
 
           <li class="dropdown dropDownServiceNormal">
-            <a href="#features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <a href="#Features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul class="serviceMenu" style="display: flex; align-items: normal !important">
               <div>
                 <ol style="color: black; font-weight: bold; padding-left: 13px">
@@ -750,7 +750,7 @@ class ContactCareerNavbar extends HTMLElement {
 
           <!-- for Mobile responsive navbar  -->
           <li class="dropdown dropDownServiceMobile">
-            <a href="#features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <a href="#Features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li class="dropdown">
                 <a href="#"><span>Implementation</span>
