@@ -366,9 +366,9 @@ class Navbar extends HTMLElement {
           <li class="dropdown">
             <a href="#About"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#about">About us</a></li>
-              <li><a href="#team">Leadership</a></li>
-              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#about" onclick="navbarClosed()">About us</a></li>
+              <li><a href="#team" onclick="navbarClosed()">Leadership</a></li>
+              <li><a href="#testimonials" onclick="navbarClosed()">Testimonials</a></li>
               <li><a href="Carrer.html">Careers</a></li>
               <li><a href="CaseStudy.html">Case Study</a></li>
               <li><a href="Contact.html">Contact us</a></li>
@@ -379,7 +379,7 @@ class Navbar extends HTMLElement {
             <a class="getstarted scrollto" href="#contact">Request Demo</a>
           </li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <i class="bi bi-list mobile-nav-toggle " id="crossBttn"></i>
       </nav>
       <!-- .navbar -->
     </div>
