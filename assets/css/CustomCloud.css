@@ -16,7 +16,9 @@
 /* .wrapper{margin:10vh}   */
 /* //post card styles */
 /* ================================= */
-
+html {
+  scroll-behavior: smooth;
+}
 .divBody {
   display: flex;
   justify-content: center;

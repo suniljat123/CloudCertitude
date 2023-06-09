@@ -11,6 +11,9 @@
 
 --------------------------------------------------------------*/
 /* / Custom Css / */
+html {
+  scroll-behavior: smooth;
+}
 .whyChoose {
   font-size: 30px !important;
 }

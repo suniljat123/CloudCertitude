@@ -11,6 +11,9 @@
 
 --------------------------------------------------------------*/
 /* / Custom Css / */
+html {
+  scroll-behavior: smooth;
+}
 .laptopImage {
   margin-top: -7.5rem;
   position: absolute;
