@@ -376,7 +376,7 @@ class Navbar extends HTMLElement {
           </li>
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
           <li>
-            <a class="getstarted scrollto" href="#contact">Request Demo</a>
+            <a class="getstarted scrollto RequestDemo" href="#contact" >Request Demo</a>
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle " id="crossBttn"></i>
