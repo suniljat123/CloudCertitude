@@ -601,6 +601,11 @@
       document.getElementById("email").value = "";
       document.getElementById("phone").value = "";
       document.getElementById("otpValue").value = "";
+      $("#company").removeClass("is-invalid");
+      $("#phone").removeClass("is-invalid");
+      $("#email").removeClass("is-invalid");
+      $("#last_name").removeClass("is-invalid");
+      $("#first_name").removeClass("is-invalid");
     }
     function showFirstModal() {
       $("#staticBackdrop").modal("show");
