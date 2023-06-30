@@ -412,7 +412,7 @@ function sendLead() {
   emailError = document.getElementById("emailErr");
   if (fname.length < 1) {
     $("#first_name").addClass("is-invalid");
-    fNameError.innerHTML = "Please enter Firstname\r\n";
+    fNameError.innerHTML = "Please enter First Name\r\n";
   } else if (fname.length > 0 && $("#first_name").hasClass("is-invalid")) {
     $("#first_name").removeClass("is-invalid");
     fNameError.innerHTML = "";
@@ -420,7 +420,7 @@ function sendLead() {
 
   if (lname.length < 1) {
     $("#last_name").addClass("is-invalid");
-    lNameError.innerHTML = "Please enter Lastname\r\n";
+    lNameError.innerHTML = "Please enter Last Name\r\n";
   } else if (lname.length > 0 && $("#last_name").hasClass("is-invalid")) {
     $("#last_name").removeClass("is-invalid");
     lNameError.innerHTML = "";
