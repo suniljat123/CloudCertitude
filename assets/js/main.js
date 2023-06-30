@@ -480,6 +480,7 @@ $(document).ready(function () {
     }
   }
 });
+
 function closeallbackdrop() {
   document.querySelectorAll(".modal-backdrop").forEach((el) => el.remove());
   document.getElementById("first_name").value = "";
