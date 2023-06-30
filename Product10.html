@@ -601,6 +601,7 @@
   </script>
   <script>
     function closeallbackdrop() {
+      removeInvalidClasses();
       document.querySelectorAll(".modal-backdrop").forEach((el) => el.remove());
       document.getElementById("first_name").value = "";
       document.getElementById("last_name").value = "";
@@ -608,11 +609,18 @@
       document.getElementById("email").value = "";
       document.getElementById("phone").value = "";
       document.getElementById("otpValue").value = "";
-      $("#company").removeClass("is-invalid");
-      $("#phone").removeClass("is-invalid");
-      $("#email").removeClass("is-invalid");
-      $("#last_name").removeClass("is-invalid");
-      $("#first_name").removeClass("is-invalid");
+    }
+    function removeInvalidClasses() {
+      $('#first_name').removeClass("is-invalid");
+      $('#last_name').removeClass("is-invalid");
+      $('#email').removeClass("is-invalid");
+      $('#phone').removeClass("is-invalid");
+      $('#company').removeClass('is-invalid');
+      document.getElementById("fnameErr").innerHTML = '';
+      document.getElementById("lnameErr").innerHTML = '';
+      document.getElementById("phoneErr").innerHTML = '';
+      document.getElementById("companyErr").innerHTML = '';
+      document.getElementById("emailErr").innerHTML = '';
     }
     function showFirstModal() {
       $("#staticBackdrop").modal("show");
