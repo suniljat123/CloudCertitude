@@ -177,7 +177,7 @@ class Navbar extends HTMLElement {
             <a href="#Features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul class="serviceMenu" style="display: flex; align-items: normal !important">
               <div>
-                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                <ol style="color: black; font-weight: bold; padding-left: 13px;cursor:pointer">
                   Implementation
                 </ol>
                 <li class="ServiceLi">
@@ -194,7 +194,7 @@ class Navbar extends HTMLElement {
                       <li class="ServiceLi"><a href="EducationCloud.html">Education Cloud</a></li>
                 <li class="ServiceLi"><a href="HealthCloud.html">Health Cloud</a></li>
                
-                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                <ol style="color: black; font-weight: bold; padding-left: 13px;cursor:pointer">
                   Migration
                 </ol>
                 <li class="ServiceLi">
@@ -206,7 +206,7 @@ class Navbar extends HTMLElement {
               </div>
 
               <div>
-                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                <ol style="color: black; font-weight: bold; padding-left: 13px;cursor:pointer">
                   Development
                 </ol>
                 <li class="ServiceLi">
@@ -225,7 +225,7 @@ class Navbar extends HTMLElement {
                   <a href="SalesforceConfiguration.html">Salesforce Configuration</a>
                 </li>
                 
-                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                <ol style="color: black; font-weight: bold; padding-left: 13px ;cursor:pointer">
                   Support
                 </ol>
                 <li class="ServiceLi"><a href="ManagedServices.html">Managed Services</a></li>
@@ -244,7 +244,7 @@ class Navbar extends HTMLElement {
 
 
               <div>
-                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                <ol style="color: black; font-weight: bold; padding-left: 13px;cursor:pointer">
                   Integration & Consulting
                 </ol>
                 <li class="ServiceLi"><a href="ERPIntegration.html">ERP </a></li>
@@ -407,7 +407,7 @@ class AllNavbar extends HTMLElement {
             <a href="#Features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul class="serviceMenu" style="display: flex; align-items: normal !important">
               <div>
-                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                <ol style="color: black; font-weight: bold; padding-left: 13px;cursor:pointer">
                   Implementation
                 </ol>
                 <li class="ServiceLi">
@@ -426,7 +426,7 @@ class AllNavbar extends HTMLElement {
                 <li class="ServiceLi"><a href="SalesforcePardot.html">Salesforce Pardot</a></li>
                 <li class="ServiceLi"><a href="EducationCloud.html">Education Cloud</a></li>
                 <li class="ServiceLi"><a href="HealthCloud.html">Health Cloud</a></li>
-                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                <ol style="color: black; font-weight: bold; padding-left: 13px;cursor:pointer">
                   Migration
                 </ol>
                 <li class="ServiceLi">
@@ -438,7 +438,7 @@ class AllNavbar extends HTMLElement {
               </div>
 
               <div>
-                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                <ol style="color: black; font-weight: bold; padding-left: 13px;cursor:pointer">
                   Development
                 </ol>
                 <li class="ServiceLi">
@@ -457,7 +457,7 @@ class AllNavbar extends HTMLElement {
                   <a href="SalesforceConfiguration.html">Salesforce Configuration</a>
                 </li>
                 
-                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                <ol style="color: black; font-weight: bold; padding-left: 13px;cursor:pointer">
                   Support
                 </ol>
                 <li class="ServiceLi"><a href="ManagedServices.html">Managed Services</a></li>
@@ -476,7 +476,7 @@ class AllNavbar extends HTMLElement {
 
 
               <div>
-                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                <ol style="color: black; font-weight: bold; padding-left: 13px;cursor:pointer">
                   Integration & Consulting
                 </ol>
                 <li class="ServiceLi"><a href="ERPIntegration.html">ERP </a></li>
@@ -648,7 +648,7 @@ class ContactCareerNavbar extends HTMLElement {
             <a href="#Features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul class="serviceMenu" style="display: flex; align-items: normal !important">
               <div>
-                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                <ol style="color: black; font-weight: bold; padding-left: 13px;cursor:pointer">
                   Implementation
                 </ol>
                 <li class="ServiceLi">
@@ -667,7 +667,7 @@ class ContactCareerNavbar extends HTMLElement {
                 <li class="ServiceLi"><a href="SalesforcePardot.html">Salesforce Pardot</a></li>
                 <li class="ServiceLi"><a href="EducationCloud.html">Education Cloud</a></li>
                 <li class="ServiceLi"><a href="HealthCloud.html">Health Cloud</a></li>
-                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                <ol style="color: black; font-weight: bold; padding-left: 13px;cursor:pointer">
                   Migration
                 </ol>
                 <li class="ServiceLi">
@@ -679,7 +679,7 @@ class ContactCareerNavbar extends HTMLElement {
               </div>
 
               <div>
-                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                <ol style="color: black; font-weight: bold; padding-left: 13px;cursor:pointer">
                   Development
                 </ol>
                 <li class="ServiceLi">
@@ -698,7 +698,7 @@ class ContactCareerNavbar extends HTMLElement {
                   <a href="SalesforceConfiguration.html">Salesforce Configuration</a>
                 </li>
                 
-                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                <ol style="color: black; font-weight: bold; padding-left: 13px ;cursor:pointer">
                   Support
                 </ol>
                 <li class="ServiceLi"><a href="ManagedServices.html">Managed Services</a></li>
@@ -717,7 +717,7 @@ class ContactCareerNavbar extends HTMLElement {
 
 
               <div>
-                <ol style="color: black; font-weight: bold; padding-left: 13px">
+                <ol style="color: black; font-weight: bold; padding-left: 13px;cursor:pointer">
                   Integration & Consulting
                 </ol>
                 <li class="ServiceLi"><a href="ERPIntegration.html">ERP </a></li>

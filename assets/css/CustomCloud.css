@@ -13,6 +13,11 @@ html {
   perspective: 1000px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .flip-card-inner {
   position: relative;
   width: 100%;

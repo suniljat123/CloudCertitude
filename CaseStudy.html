@@ -42,7 +42,7 @@
   <section id="hero" style="background-image: url(./assets/img/caseSutdymain.jpg)">
     <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
       <h1>Case Studies</h1>
-      <h2>Grow your business and boost your productivity with Our Company</h2>
+      <h2>Grow your business and boost your productivity with Our Company.</h2>
       <div class="d-flex">
         <a href="Contact.html" class="btn-get-started scrollto">Get In Touch</a>
         &nbsp;&nbsp;
@@ -58,7 +58,8 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="staticBackdropLabel">Please Enter Details</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            onclick="closeallbackdrop()"></button>
         </div>
         <div class="modal-body">
           <form id="leadForm">
@@ -68,13 +69,13 @@
             <div class="mb-3">
               <label for="first_name" class="form-label"> <span style="color: red;">*</span> First Name</label>
               <input class="form-control" id="first_name" maxlength="40" name="first_name" size="20" type="text"
-                placeholder="First Name">
+                placeholder="First Name" onkeypress="return validateInput(event)">
               <div id="fnameErr" style="padding-left: 5px;color: red;"></div>
             </div>
             <div class="mb-3">
               <label for="last_name" class="form-label"><span style="color: red;">*</span>Last Name</label>
               <input class="form-control" id="last_name" maxlength="80" name="last_name" size="20" type="text"
-                placeholder="Last Name">
+                placeholder="Last Name" onkeypress="return validateInput(event)">
               <div id="lnameErr" style="padding-left: 5px;color: red;"></div>
             </div>
             <div class="mb-3">
@@ -85,8 +86,8 @@
             </div>
             <div class="mb-3">
               <label for="phone" class="form-label"><span style="color: red;">*</span>Phone</label>
-              <input class="form-control" id="phone" maxlength="10" name="phone" size="20" type="number"
-                placeholder="Phone">
+              <input class="form-control" id="phone" maxlength="10" name="phone" size="20" type="tel"
+                placeholder="Phone" onkeypress="return validatePhone(event)">
               <div id="phoneErr" style="padding-left: 5px;color: red;"></div>
             </div>
             <div class="mb-3">
@@ -98,7 +99,8 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            onclick="closeallbackdrop()">Cancel</button>
           <button type="button" class="btn btn-primary" onclick="sendLead()">Submit</button>
         </div>
       </div>
@@ -130,7 +132,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Higher Education,<br />Online Education,<br />Continuing
-                      Education,<br /> Education Technology,<br />Nonprofit Education Initiatives</a>
+                      Education,<br /> Education Technology,<br />Nonprofit Education Initiatives.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -151,7 +153,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">E-commerce,<br />Apparel and Fashion,<br />CPG,<br /> Automotive and
-                      Accessories,<br />Home and Lifestyle</a>
+                      Accessories,<br />Home and Lifestyle.</a>
                   </h4>
                 </div>
               </div>
@@ -170,7 +172,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Advertising and Marketing,<br />Broadcasting and
-                      Media,<br />Publishing,<br />Entertainment and Events,<br />Telecommunications</a>
+                      Media,<br />Publishing,<br />Entertainment and Events,<br />Telecommunications.</a>
                   </h4>
                 </div>
 
@@ -190,7 +192,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Government Agencies,<br />Healthcare and Human Services,<br />Law
-                      Enforcement and Public Safety,<br /> Education,<br />Transportation and Infrastructure</a>
+                      Enforcement and Public Safety,<br /> Education,<br />Transportation and Infrastructure.</a>
                   </h4>
                 </div>
 
@@ -209,7 +211,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Social Services,<br />Education,<br />Environmental
-                      Conservation,<br /> Arts and Culture,<br />Advocacy and Human Rights</a>
+                      Conservation,<br /> Arts and Culture,<br />Advocacy and Human Rights.</a>
                   </h4>
                 </div>
 
@@ -228,7 +230,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Automotive,<br />Electronics,<br />Industrial
-                      Equipment,<br />Consumer Goods,<br />Pharmaceuticals</a>
+                      Equipment,<br />Consumer Goods,<br />Pharmaceuticals.</a>
                   </h4>
                 </div>
                 <!-- <div class="card-footer">
@@ -262,7 +264,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Banking and Financial Services,<br />Insurance,<br />Wealth
-                      Management,<br />FinTech,<br />Mortgage and Lending</a>
+                      Management,<br />FinTech,<br />Mortgage and Lending.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -285,7 +287,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Health Insurance,<br />Pharmaceutical and Life Sciences,<br />Medical
-                      Device Manufacturers,<br />Home Healthcare,<br />Hospitals and Healthcare Providers</a>
+                      Device Manufacturers,<br />Home Healthcare,<br />Hospitals and Healthcare Providers.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -309,7 +311,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Consulting Services,<br />Financial Services,<br />Real
-                      Estate,<br />Legal Services,<br />Architecture and Engineering</a>
+                      Estate,<br />Legal Services,<br />Architecture and Engineering.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -333,7 +335,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Biotechnology,<br />Pharmaceutical,<br />Medical
-                      Device,<br />Clinical Research,<br />Health Diagnostics</a>
+                      Device,<br />Clinical Research,<br />Health Diagnostics.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -357,7 +359,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Customer Service and Support,<br />Telecommunications,<br />Financial
-                      Services,<br />Government and Public Sector,<br />Professional Services</a>
+                      Services,<br />Government and Public Sector,<br />Professional Services.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -381,7 +383,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Business-to-Business,<br />Technology and
-                      Software,<br />Manufacturing and Industrial,<br />Professional Services,<br />Education</a>
+                      Software,<br />Manufacturing and Industrial,<br />Professional Services,<br />Education.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -405,7 +407,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Retail,<br />Technology,<br />Real Estate,<br />Nonprofit
-                      Organizations,<br />Travel and Hospitality</a>
+                      Organizations,<br />Travel and Hospitality.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -429,7 +431,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Charitable Organizations,<br />Foundations,<br />Education and
-                      Research,<br />Environmental Conservation,<br />Social Services</a>
+                      Research,<br />Environmental Conservation,<br />Social Services.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -452,7 +454,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Automotive,<br />Electronics,<br />Industrial
-                      Equipment,<br />Pharmaceuticals,<br />Food and Beverage</a>
+                      Equipment,<br />Pharmaceuticals,<br />Food and Beverage.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -475,7 +477,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Health Insurance,<br />Medical Device Manufacturers,<br />Behavioral
-                      Health,<br />Home Healthcare,<br />Education</a>
+                      Health,<br />Home Healthcare,<br />Education.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -498,7 +500,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Education Consulting,<br />Education Technology,<br />Continuing
-                      Education,<br />Higher Education,<br />Online Learning</a>
+                      Education,<br />Higher Education,<br />Online Learning.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -522,7 +524,7 @@
                   <h4 class="card-title mt-0">
                     <a class="text-white"
                       herf="#">Telecommunications,<br />Manufacturing,<br />Healthcare,<br />Financial
-                      Services,<br />Nonprofit Organizations</a>
+                      Services,<br />Nonprofit Organizations.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -546,7 +548,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Technology,<br />Professional Services,<br />Education,<br />Travel
-                      and Hospitality,<br />Healthcare</a>
+                      and Hospitality,<br />Healthcare.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -570,7 +572,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Banking,<br />Insurance,<br />Wealth Management,<br />Asset
-                      Management,<br />Payment Processing</a>
+                      Management,<br />Payment Processing.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -593,7 +595,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Government,<br />Manufacturing,<br />Hospitality and
-                      Travel,<br />Retail,<br />Education</a>
+                      Travel,<br />Retail,<br />Education.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -616,7 +618,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Software Development,<br />Hardware
-                      Manufacturing,<br />Electronics,<br />Semiconductor,<br />Cloud Computing</a>
+                      Manufacturing,<br />Electronics,<br />Semiconductor,<br />Cloud Computing.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -640,7 +642,7 @@
                   <br /><br />
                   <h4 class="card-title mt-0">
                     <a class="text-white" herf="#">Education,<br />Nonprofit Organizations,<br />Financial
-                      Services,<br />Retail,<br />Government</a>
+                      Services,<br />Retail,<br />Government.</a>
                   </h4>
                 </div>
                 <div class="card-footer">
@@ -875,6 +877,15 @@
       link.download = fileName;
       link.click();
       myfile = ''
+    }
+    function closeallbackdrop() {
+      document.querySelectorAll(".modal-backdrop").forEach((el) => el.remove());
+      document.getElementById("first_name").value = "";
+      document.getElementById("last_name").value = "";
+      document.getElementById("company").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("phone").value = "";
+      document.getElementById("otpValue").value = "";
     }
   </script>
 </body>

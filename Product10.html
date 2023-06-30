@@ -51,7 +51,7 @@
     data-cutsom-vals="a1a3j000009wRGsAAM">
     <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
       <h1>Mass Download</h1>
-      <h2>Grow your business and boost your productivity with our Mass Download Product</h2>
+      <h2>Grow your business and boost your productivity with our Mass Download Product.</h2>
       <div class="d-flex">
         <button type="button" class="btn-get-started scrollto" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
           onclick="showFirstModal()">
@@ -67,7 +67,8 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="staticBackdropLabel">Please Enter Details</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            onclick="closeallbackdrop()"></button>
         </div>
         <div class="modal-body">
           <form id="leadForm">
@@ -77,13 +78,13 @@
             <div class="mb-3">
               <label for="first_name" class="form-label"> <span style="color: red;">*</span> First Name</label>
               <input class="form-control" id="first_name" maxlength="40" name="first_name" size="20" type="text"
-                placeholder="First Name">
+                placeholder="First Name" onkeypress="return validateInput(event)">
               <div id="fnameErr" style="padding-left: 5px;color: red;"></div>
             </div>
             <div class="mb-3">
               <label for="last_name" class="form-label"><span style="color: red;">*</span>Last Name</label>
               <input class="form-control" id="last_name" maxlength="80" name="last_name" size="20" type="text"
-                placeholder="Last Name">
+                placeholder="Last Name" onkeypress="return validateInput(event)">
               <div id="lnameErr" style="padding-left: 5px;color: red;"></div>
             </div>
             <div class="mb-3">
@@ -94,8 +95,8 @@
             </div>
             <div class="mb-3">
               <label for="phone" class="form-label"><span style="color: red;">*</span>Phone</label>
-              <input class="form-control" id="phone" maxlength="10" name="phone" size="20" type="number"
-                placeholder="Phone">
+              <input class="form-control" id="phone" maxlength="10" name="phone" size="20" type="tel"
+                placeholder="Phone" onkeypress="return validatePhone(event)">
               <div id="phoneErr" style="padding-left: 5px;color: red;"></div>
             </div>
             <div class="mb-3">
@@ -107,7 +108,8 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            onclick="closeallbackdrop()">Cancel</button>
           <button type="button" class="btn btn-primary" onclick="sendLead()">Next</button>
         </div>
       </div>
@@ -132,7 +134,8 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-target="#staticBackdrop" data-bs-toggle="modal">Go
+          <button type="button" class="btn btn-secondary" data-bs-target="#staticBackdrop" data-bs-toggle="modal"
+            onclick="goBack()">Go
             Back</button>
           <button class="btn btn-primary" onclick="sendOtp()">Resend </button>
           <button class="btn btn-primary" onclick="verifyOtp()">Verify</button>
@@ -597,147 +600,21 @@
     }  
   </script>
   <script>
-    $(document).ready(function () {
-      $(".customer-logos").slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 500,
-        arrows: false,
-        dots: false,
-        pauseOnHover: false,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 4,
-            },
-          },
-          {
-            breakpoint: 520,
-            settings: {
-              slidesToShow: 3,
-            },
-          },
-        ],
-      });
-    });
-  </script>
-  <script>
-    window.addEventListener('input', function (evt) {
-
-      fNameError = document.getElementById("fnameErr");
-      lNameError = document.getElementById("lnameErr");
-      phoneError = document.getElementById("phoneErr");
-      companyError = document.getElementById("companyErr");
-      emailError = document.getElementById("emailErr");
-      if (evt.target.id === 'first_name') {
-        $('#first_name').removeClass("is-invalid");
-        fNameError.innerHTML = "";
-      }
-      else if (evt.target.id === 'last_name') {
-        $('#last_name').removeClass("is-invalid");
-        lNameError.innerHTML = "";
-      }
-      else if (evt.target.id === 'phone') {
-        $('#phone').removeClass("is-invalid");
-        phoneError.innerHTML = "";
-      }
-      else if (evt.target.id === 'company') {
-        $('#company').removeClass("is-invalid");
-        companyError.innerHTML = "";
-      }
-      else if (evt.target.id === 'email') {
-        $('#email').removeClass("is-invalid");
-        emailError.innerHTML = "";
-      }
-      else if (evt.target.id === 'otpValue') {
-        $('#otpValue').removeClass("is-invalid");
-        otpError.innerHTML = "";
-      }
-    })
-    function sendLead() {
-      let fname = document.getElementById("first_name").value
-      fname = fname.trim()
-      let lname = document.getElementById("last_name").value
-      lname = lname.trim()
-      let company = document.getElementById("company").value
-      company = company.trim()
-      let email = document.getElementById("email").value
-      email = email.trim()
-      let phone = document.getElementById("phone").value
-      phone = phone.trim()
-      let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      fNameError = document.getElementById("fnameErr");
-      lNameError = document.getElementById("lnameErr");
-      phoneError = document.getElementById("phoneErr");
-      companyError = document.getElementById("companyErr");
-      emailError = document.getElementById("emailErr");
-      if (fname.length < 2) {
-        $('#first_name').addClass("is-invalid");
-        fNameError.innerHTML = "First Name must contains atleast 2 characters\r\n";
-      } else if (fname.length > 0 &&
-        $('#first_name').hasClass("is-invalid")) {
-        $('#first_name').removeClass("is-invalid");
-        fNameError.innerHTML = "";
-      }
-
-      if (lname.length < 2) {
-        $('#last_name').addClass("is-invalid");
-        lNameError.innerHTML = "Last Name must contains atleast 2 characters\r\n";
-      } else if (lname.length > 0 &&
-        $('#last_name').hasClass("is-invalid")) {
-        $('#last_name').removeClass("is-invalid");
-        lNameError.innerHTML = "";
-      }
-      //console.log(mailformat.test(document.getElementById("email").value));
-      if (email.length < 1 || !(mailformat.test(document.getElementById("email").value))) {
-        $('#email').addClass("is-invalid"); emailError.innerHTML = "Please Enter Correct Email\r\n";
-      } else if
-        (email.length > 0 && (mailformat.test(document.getElementById("email").value))) {
-        $('#email').removeClass("is-invalid");
-        emailError.innerHTML = "";
-      }
-
-      if (phone.length !== 10) {
-        $('#phone').addClass("is-invalid");
-        phoneError.innerHTML = "Please Enter Correct Phone Number\r\n";
-      }
-      else if (phone.length === 10 && $('#phone').hasClass("is-invalid")) {
-        $('#phone').removeClass("is-invalid");
-        phoneError.innerHTML = "";
-      }
-
-      if (company.length < 2) {
-        $('#company').addClass("is-invalid");
-        companyError.innerHTML = "Company Name must contains atleast 2 characters\r\n";
-      } else if (company.length > 0
-        && $('#company').hasClass("is-invalid")) {
-        $('#company').removeClass("is-invalid");
-        companyError.innerHTML = "";
-      }
-
-      if (!($('#company').hasClass("is-invalid") || $('#phone').hasClass("is-invalid") ||
-        $('#email').hasClass("is-invalid") || $('#last_name').hasClass("is-invalid") ||
-        $('#first_name').hasClass("is-invalid"))) {
-        $("#staticBackdrop").modal("hide");
-        const modal2 = new bootstrap.Modal('#exampleModalToggle2');
-        modal2.show();
-        sendOtp();
-      }
-    }
     function closeallbackdrop() {
-      document.querySelectorAll(".modal-backdrop").forEach(el => el.remove());
-      document.getElementById("first_name").value = ''
-      document.getElementById("last_name").value = ''
-      document.getElementById("company").value = ''
-      document.getElementById("email").value = ''
-      document.getElementById("phone").value = ''
+      document.querySelectorAll(".modal-backdrop").forEach((el) => el.remove());
+      document.getElementById("first_name").value = "";
+      document.getElementById("last_name").value = "";
+      document.getElementById("company").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("phone").value = "";
+      document.getElementById("otpValue").value = "";
     }
     function showFirstModal() {
       $("#staticBackdrop").modal("show");
     }
+
   </script>
+
 </body>
 
 </html>
