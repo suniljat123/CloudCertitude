@@ -820,10 +820,10 @@
         $('#company').removeClass("is-invalid");
         companyError.innerHTML = "";
       }
-
+      console.log('out')
       if (!($('#company').hasClass("is-invalid") || $('#phone').hasClass("is-invalid") || $('#email').hasClass("is-invalid") || $('#last_name').hasClass("is-invalid") || $('#first_name').hasClass("is-invalid"))) {
         $("#staticBackdrop").modal("hide");
-
+        console.log('in')
         createLead();
       }
     }
