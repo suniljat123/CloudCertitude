@@ -392,95 +392,93 @@ function validatePhone(event) {
     return false;
   }
 }
-$(document).ready(function () {
-  function sendLead() {
-    let fname = document.getElementById("first_name").value;
-    fname = fname.trim();
-    let lname = document.getElementById("last_name").value;
-    lname = lname.trim();
-    let company = document.getElementById("company").value;
-    company = company.trim();
-    let email = document.getElementById("email").value;
-    email = email.trim();
-    let phone = document.getElementById("phone").value;
-    phone = phone.trim();
-    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    fNameError = document.getElementById("fnameErr");
-    lNameError = document.getElementById("lnameErr");
-    phoneError = document.getElementById("phoneErr");
-    companyError = document.getElementById("companyErr");
-    emailError = document.getElementById("emailErr");
-    if (fname.length < 1) {
-      $("#first_name").addClass("is-invalid");
-      fNameError.innerHTML = "Please enter Firstname\r\n";
-    } else if (fname.length > 0 && $("#first_name").hasClass("is-invalid")) {
-      $("#first_name").removeClass("is-invalid");
-      fNameError.innerHTML = "";
-    }
 
-    if (lname.length < 1) {
-      $("#last_name").addClass("is-invalid");
-      lNameError.innerHTML = "Please enter Lastname\r\n";
-    } else if (lname.length > 0 && $("#last_name").hasClass("is-invalid")) {
-      $("#last_name").removeClass("is-invalid");
-      lNameError.innerHTML = "";
-    }
-    //console.log(mailformat.test(document.getElementById("email").value));
-    if (
-      email.length < 1 ||
-      !mailformat.test(document.getElementById("email").value)
-    ) {
-      $("#email").addClass("is-invalid");
-
-      if (email.length == 0) {
-        emailError.innerHTML = "Please enter Email\r\n";
-      } else {
-        emailError.innerHTML = "Please Enter valid Email\r\n";
-      }
-    } else if (
-      email.length > 0 &&
-      mailformat.test(document.getElementById("email").value)
-    ) {
-      $("#email").removeClass("is-invalid");
-      emailError.innerHTML = "";
-    }
-
-    if (phone.length === 0) {
-      $("#phone").addClass("is-invalid");
-      phoneError.innerHTML = "Please enter Phone Number\r\n";
-    } else if (phone.length !== 10) {
-      $("#phone").addClass("is-invalid");
-      phoneError.innerHTML = "Please enter Valid Phone Number\r\n";
-    } else if (phone.length === 10 && $("#phone").hasClass("is-invalid")) {
-      $("#phone").removeClass("is-invalid");
-      phoneError.innerHTML = "";
-    }
-
-    if (company.length < 1) {
-      $("#company").addClass("is-invalid");
-      companyError.innerHTML = "Please enter Company name\r\n";
-    } else if (company.length > 0 && $("#company").hasClass("is-invalid")) {
-      $("#company").removeClass("is-invalid");
-      companyError.innerHTML = "";
-    }
-
-    if (
-      !(
-        $("#company").hasClass("is-invalid") ||
-        $("#phone").hasClass("is-invalid") ||
-        $("#email").hasClass("is-invalid") ||
-        $("#last_name").hasClass("is-invalid") ||
-        $("#first_name").hasClass("is-invalid")
-      )
-    ) {
-      $("#staticBackdrop").modal("hide");
-      const modal2 = new bootstrap.Modal("#exampleModalToggle2");
-      modal2.show();
-      sendOtp();
-    }
+function sendLead() {
+  let fname = document.getElementById("first_name").value;
+  fname = fname.trim();
+  let lname = document.getElementById("last_name").value;
+  lname = lname.trim();
+  let company = document.getElementById("company").value;
+  company = company.trim();
+  let email = document.getElementById("email").value;
+  email = email.trim();
+  let phone = document.getElementById("phone").value;
+  phone = phone.trim();
+  let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  fNameError = document.getElementById("fnameErr");
+  lNameError = document.getElementById("lnameErr");
+  phoneError = document.getElementById("phoneErr");
+  companyError = document.getElementById("companyErr");
+  emailError = document.getElementById("emailErr");
+  if (fname.length < 1) {
+    $("#first_name").addClass("is-invalid");
+    fNameError.innerHTML = "Please enter Firstname\r\n";
+  } else if (fname.length > 0 && $("#first_name").hasClass("is-invalid")) {
+    $("#first_name").removeClass("is-invalid");
+    fNameError.innerHTML = "";
   }
-});
 
+  if (lname.length < 1) {
+    $("#last_name").addClass("is-invalid");
+    lNameError.innerHTML = "Please enter Lastname\r\n";
+  } else if (lname.length > 0 && $("#last_name").hasClass("is-invalid")) {
+    $("#last_name").removeClass("is-invalid");
+    lNameError.innerHTML = "";
+  }
+  //console.log(mailformat.test(document.getElementById("email").value));
+  if (
+    email.length < 1 ||
+    !mailformat.test(document.getElementById("email").value)
+  ) {
+    $("#email").addClass("is-invalid");
+
+    if (email.length == 0) {
+      emailError.innerHTML = "Please enter Email\r\n";
+    } else {
+      emailError.innerHTML = "Please Enter valid Email\r\n";
+    }
+  } else if (
+    email.length > 0 &&
+    mailformat.test(document.getElementById("email").value)
+  ) {
+    $("#email").removeClass("is-invalid");
+    emailError.innerHTML = "";
+  }
+
+  if (phone.length === 0) {
+    $("#phone").addClass("is-invalid");
+    phoneError.innerHTML = "Please enter Phone Number\r\n";
+  } else if (phone.length !== 10) {
+    $("#phone").addClass("is-invalid");
+    phoneError.innerHTML = "Please enter Valid Phone Number\r\n";
+  } else if (phone.length === 10 && $("#phone").hasClass("is-invalid")) {
+    $("#phone").removeClass("is-invalid");
+    phoneError.innerHTML = "";
+  }
+
+  if (company.length < 1) {
+    $("#company").addClass("is-invalid");
+    companyError.innerHTML = "Please enter Company name\r\n";
+  } else if (company.length > 0 && $("#company").hasClass("is-invalid")) {
+    $("#company").removeClass("is-invalid");
+    companyError.innerHTML = "";
+  }
+
+  if (
+    !(
+      $("#company").hasClass("is-invalid") ||
+      $("#phone").hasClass("is-invalid") ||
+      $("#email").hasClass("is-invalid") ||
+      $("#last_name").hasClass("is-invalid") ||
+      $("#first_name").hasClass("is-invalid")
+    )
+  ) {
+    $("#staticBackdrop").modal("hide");
+    const modal2 = new bootstrap.Modal("#exampleModalToggle2");
+    modal2.show();
+    sendOtp();
+  }
+}
 function closeallbackdrop() {
   document.querySelectorAll(".modal-backdrop").forEach((el) => el.remove());
   document.getElementById("first_name").value = "";
