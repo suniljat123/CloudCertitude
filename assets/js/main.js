@@ -394,6 +394,7 @@ function validatePhone(event) {
 }
 
 function sendLead() {
+  document.getElementById("otpValue").value = "";
   let fname = document.getElementById("first_name").value;
   fname = fname.trim();
   let lname = document.getElementById("last_name").value;
