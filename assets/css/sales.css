@@ -1,0 +1,52 @@
+.SalesPage1 {
+  background: url(../img/salecloud.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+  font-size: 2.7rem;
+}
+.SalesPage1InnerDiv {
+  width: 70vh;
+  position: relative;
+  padding-top: 15vh;
+  font-weight: 800;
+}
+.SalesPage1InnerDiv a {
+  font-size: 1rem;
+  color: white;
+  font-weight: 600;
+  padding: 1.5vh 2.2vh;
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 4px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.SalesPage1InnerDiv a:hover {
+  background: #fd3800;
+  border-color: #ff4a17;
+}
+.SalesPage2 {
+  padding: 12vh 4vh;
+}
+.SalesPage2 img {
+  max-width: 80vh;
+  width: 60vh;
+  max-height: 40vh;
+  border-radius: 8px;
+}
+.SalesPage3 div {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 2rem;
+  padding: 3vh 5%;
+  font-weight: 600;
+}
+.SalesPage3 ul li {
+  list-style: none;
+  padding: 1vh 3%;
+}
