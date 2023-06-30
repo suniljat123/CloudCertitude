@@ -479,14 +479,7 @@ function sendLead() {
     sendOtp();
   }
 }
-function closeallbackdrop() {
-  document.querySelectorAll(".modal-backdrop").forEach((el) => el.remove());
-  document.getElementById("first_name").value = "";
-  document.getElementById("last_name").value = "";
-  document.getElementById("company").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("phone").value = "";
-}
+
 function showFirstModal() {
   $("#staticBackdrop").modal("show");
 }
