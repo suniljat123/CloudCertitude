@@ -777,45 +777,53 @@
       phoneError = document.getElementById("phoneErr");
       companyError = document.getElementById("companyErr");
       emailError = document.getElementById("emailErr");
-      if (fname.length < 2) {
+      if (fname.length == 0) {
         $('#first_name').addClass("is-invalid");
-        fNameError.innerHTML = "First Name must contains atleast 2 characters\r\n";
+        fNameError.innerHTML = "Please enter Firstname\r\n";
       }
       else if (fname.length > 0 && $('#first_name').hasClass("is-invalid")) {
         $('#first_name').removeClass("is-invalid");
         fNameError.innerHTML = "";
       }
 
-      if (lname.length < 2) {
+      if (lname.length == 0) {
         $('#last_name').addClass("is-invalid");
-        lNameError.innerHTML = "Last Name must contains atleast 2 characters\r\n";
+        lNameError.innerHTML = "Please enter Lastname  \r\n";
       }
       else if (lname.length > 0 && $('#last_name').hasClass("is-invalid")) {
         $('#last_name').removeClass("is-invalid");
         lNameError.innerHTML = "";
       }
       //console.log(mailformat.test(document.getElementById("email").value));
-      if (email.length < 1 || !(mailformat.test(document.getElementById("email").value))) {
+      if (email.length == 0) {
         $('#email').addClass("is-invalid");
-        emailError.innerHTML = "Please Enter Correct Email\r\n";
+        emailError.innerHTML = "Please Enter Email\r\n";
+      }
+      else if (!(mailformat.test(document.getElementById("email").value))) {
+        $('#email').addClass("is-invalid");
+        emailError.innerHTML = "Please Enter Valid Email\r\n";
       }
       else if (email.length > 0 && (mailformat.test(document.getElementById("email").value))) {
         $('#email').removeClass("is-invalid");
         emailError.innerHTML = "";
       }
 
-      if (phone.length !== 10) {
+      if (phone.length == 0) {
         $('#phone').addClass("is-invalid");
-        phoneError.innerHTML = "Please Enter Correct Phone Number\r\n";
+        phoneError.innerHTML = "Please Enter Phone Number\r\n";
+      }
+      else if (phone.length !== 10) {
+        $('#phone').addClass("is-invalid");
+        phoneError.innerHTML = "Please Enter Valid Phone Number\r\n";
       }
       else if (phone.length === 10 && $('#phone').hasClass("is-invalid")) {
         $('#phone').removeClass("is-invalid");
         phoneError.innerHTML = "";
       }
 
-      if (company.length < 2) {
+      if (company.length == 0) {
         $('#company').addClass("is-invalid");
-        companyError.innerHTML = "Company Name must contains atleast 2 characters\r\n";
+        companyError.innerHTML = "Please Enter Company Name \r\n";
       }
       else if (company.length > 0 && $('#company').hasClass("is-invalid")) {
         $('#company').removeClass("is-invalid");
