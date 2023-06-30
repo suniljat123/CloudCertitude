@@ -852,6 +852,7 @@
       fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
+          console.log('result=', result)
           document.getElementById('last_name').value = ''
           document.getElementById('first_name').value = ''
           document.getElementById('company').value = ''
