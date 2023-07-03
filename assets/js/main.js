@@ -488,7 +488,3 @@ function goBack() {
   $("#exampleModalToggle2").modal("hide");
   $("#staticBackdrop").modal("show");
 }
-function showLeadForm() {
-  $("#exampleModalToggle2").modal("hide");
-  $("#staticBackdrop").modal("show");
-}
