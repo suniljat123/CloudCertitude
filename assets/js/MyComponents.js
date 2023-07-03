@@ -30,7 +30,7 @@ class Footer extends HTMLElement {
           <div>
             <h4>Reservations</h4>
             <p>
-              <strong>Phone:</strong> +91 124 6080 102<br>
+              <strong>Phone:</strong> <a href="tel:+911246080102" style="color: #ffffff">+91 124 6080 102</a> <br>
               <strong>Email:</strong> <a href="mailto: info@cloudcertitude.com"
                 style="color: #ffffff; ">info@cloudcertitude.com</a><br>
             </p>
