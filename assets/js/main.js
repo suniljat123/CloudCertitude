@@ -485,5 +485,10 @@ function showFirstModal() {
   $("#staticBackdrop").modal("show");
 }
 function goBack() {
-  document.getElementById("otpValue").value = "";
+  $("#exampleModalToggle2").modal("hide");
+  $("#staticBackdrop").modal("show");
+}
+function showLeadForm() {
+  $("#exampleModalToggle2").modal("hide");
+  $("#staticBackdrop").modal("show");
 }
