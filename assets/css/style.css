@@ -1125,7 +1125,10 @@ section {
 .testimonials .testimonials-slider {
   overflow: hidden;
 }
-
+.slick-track {
+  display: flex !important;
+  align-items: center;
+}
 .testimonials .testimonial-item {
   text-align: center;
   color: #fff;
