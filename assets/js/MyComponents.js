@@ -369,7 +369,7 @@ class Navbar extends HTMLElement {
               <li><a href="#testimonials" onclick="navbarClosed()">Testimonials</a></li>
 
               <li><a href="#team" onclick="navbarClosed()">Leadership</a></li>
-              <li><a href="Carrer.html">Careers</a></li>
+              <li><a href="Career.html">Careers</a></li>
               <li><a href="CaseStudy.html">Case Study</a></li>
               <li><a href="Contact.html">Contact us</a></li>
             </ul>
@@ -611,7 +611,7 @@ class AllNavbar extends HTMLElement {
               <li><a href="./index.html#about">About us</a></li>
                <li><a href="#testimonials">Testimonials</a></li>
               <li><a href="./index.html#team">Leadership</a></li>
-              <li><a href="Carrer.html">Careers</a></li>
+              <li><a href="Career.html">Careers</a></li>
               <li><a href="CaseStudy.html">Case Study</a></li>
               <li><a href="Contact.html">Contact us</a></li>
             </ul>
@@ -853,7 +853,7 @@ class ContactCareerNavbar extends HTMLElement {
               <li><a href="./index.html#testimonials">Testimonials</a></li>
 
               <li><a href="./index.html#team">Leadership</a></li>
-              <li><a href="Carrer.html">Careers</a></li>
+              <li><a href="Career.html">Careers</a></li>
               <li><a href="CaseStudy.html">Case Study</a></li>
               <li><a href="Contact.html">Contact us</a></li>
             </ul>
