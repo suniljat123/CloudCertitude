@@ -18,8 +18,8 @@ class Footer extends HTMLElement {
           <div>
             <h4>Address</h4>
             <p>
-              DG-B-1704&05, 17th Floor, Emaar Digital Green, Golf course
-              Extn. Road, Sector-62, Gurugram, Haryana 122004
+              DG-B-1704 & 05, 17th Floor, Emaar Digital Green, Golf course
+              Extn. Road, Sector-61, Gurugram, Haryana 122011
             </p>
           </div>
 
