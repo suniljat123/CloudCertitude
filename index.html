@@ -714,7 +714,6 @@
       fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
-          console.log('Myresult=', result)
           if (result === 'Lead Inserted Successfully') {
             callToast()
             document.getElementById('name').value = ''
