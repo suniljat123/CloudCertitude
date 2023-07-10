@@ -902,7 +902,7 @@ class ShowToast extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `<div id="toastDiv"
-    style="position:fixed; top: 80px;z-index:10000;display:none;flex-direction:column;width:100%;height:10%;align-items:center;">
+    style="position:fixed; top: 80px;z-index:10000;display:none;flex-direction:column;width:100%;height:4rem;align-items:center;">
     <div id="formendSuccess" class="toast"
       style="background-color: rgb(255, 255, 255);width: 25%;justify-content: center;height: 100%;border-left-style: solid;border-left-width: thick;border-left-color: #14ed25;min-width:18rem;"
       role="alert" aria-live="assertive" aria-atomic="true">
@@ -934,7 +934,7 @@ class ShowToast extends HTMLElement {
 
 
 
-    <!-- <div id="errorDiv" style="position:fixed; top: 80px;z-index:10000;display:none;width:100%;height:11%;justify-content:center;"> -->
+    <!-- <div id="errorDiv" style="position:fixed; top: 80px;z-index:10000;display:none;width:100%;height:4rem;justify-content:center;"> -->
     <div id="formendError" class="toast"
       style="background-color: rgb(255, 255, 255);width: 25%;justify-content: center;height: 100%;border-left-style: solid;border-left-width: thick;border-left-color: #ed2214;min-width:18rem;"
       role="alert" aria-live="assertive" aria-atomic="true">
