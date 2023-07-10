@@ -386,6 +386,63 @@
           </div>
 
           <div class="col-lg-6 mt-4 mt-lg-0">
+            <form class="php-email-form" onsubmit="validateBeforeSubmit()">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                    onkeyup="validateForm(event)" onchange="removeExtraSpaces()" />
+                  <div id="nameErr" style="padding-left: 5px;color: red;"></div>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                    onchange="removeExtraSpaces()" onkeyup="validateForm(event)" />
+                  <div id="emailErr" style="padding-left: 5px;color: red;"></div>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="Company" id="Company" placeholder="Company"
+                  onkeyup="validateForm(event)" onchange="removeExtraSpaces()" />
+                <div id="companyErr" style="padding-left: 5px;color: red;"></div>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" id="Message"
+                  onkeyup="validateForm(event)" onchange="removeExtraSpaces()"></textarea>
+                <div id="textErr" style="padding-left: 5px;color: red;"></div>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+
+                <div class="sent-message">
+                  Your message has been sent. Thank you!
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" id="submitButton">Send Request</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>REQUEST</h2>
+          <p>REQUEST A DEMO</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box" style="padding: 0">
+                  <img src="assets/img/RequestDemo.jpg" style="width: 100%; height: 23rem" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
             <form class="php-email-form" onsubmit="createRequestLead()">
               <div class="row">
                 <div class="col-md-6 form-group">
@@ -419,7 +476,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- End Contact Section -->
   </main>
   <!-- End #main -->
@@ -454,43 +511,80 @@
   <script src="assets/js/MyComponents.js"></script>
 
   <script>
-    function validateForm() {
-      let length = event.target.value.length
-      let email = document.getElementById('email').value
-      email = email.trim()
-      document.getElementById('email').value = email
-      if (event.target.value[length - 1] === ' ') {
+    function validateForm(event) {
+      let length = event.target.value.length;
+      let email = document.getElementById("email").value;
+      email = email.trim();
+      document.getElementById("email").value = email;
+      if (event.target.value[length - 1] === " ") {
         let value = event.target.value;
         value = value.trim();
-        value = value + ' '
+        value = value + " ";
         event.target.value = value;
       }
 
       let fname = event.target.value;
       fname = fname.trimStart();
       event.target.value = fname;
+      removeInvalidClass();
 
+    }
+    function removeInvalidClass() {
+      let fname = document.getElementById("name").value;
+      fname = fname.trim();
+      let company = document.getElementById("Company").value;
+      company = company.trim();
+      let email = document.getElementById("email").value;
+      email = email.trim();
+      let phone = document.getElementById("Message").value;
+      phone = phone.trim();
+      let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      fNameError = document.getElementById("nameErr");
+      phoneError = document.getElementById("textErr");
+      companyError = document.getElementById("companyErr");
+      emailError = document.getElementById("emailErr");
+      if (
+        fname.length > 0 &&
+        $("#name").hasClass("is-invalid")
+      ) {
+        $("#name").removeClass("is-invalid");
+        fNameError.innerHTML = "";
+      }
+      //console.log(mailformat.test(document.getElementById("email").value));
+      if (
+        email.length > 0 &&
+        mailformat.test(document.getElementById("email").value)
+      ) {
+        $("#email").removeClass("is-invalid");
+        emailError.innerHTML = "";
+      }
 
+      if (phone.length > 0 && $("#Message").hasClass("is-invalid")) {
+        $("#Message").removeClass("is-invalid");
+        phoneError.innerHTML = "";
+      }
+
+      if (company.length > 0 && $("#Company").hasClass("is-invalid")) {
+        $("#Company").removeClass("is-invalid");
+        companyError.innerHTML = "";
+      }
     }
     function removeExtraSpaces() {
-      let fname = document.getElementById('name').value
-      let Company = document.getElementById('Company').value
-      let Message = document.getElementById('Message').value
-      let Email = document.getElementById('email').value
+      let fname = document.getElementById("name").value;
+      let Company = document.getElementById("Company").value;
+      let Message = document.getElementById("Message").value;
+      let Email = document.getElementById("email").value;
 
-      fname = fname.replace(/\s+/g, ' ').trim()
-      Company = Company.replace(/\s+/g, ' ').trim()
-      Message = Message.replace(/\s+/g, ' ').trim()
-      Email = Email.replace(/\s+/g, ' ').trim()
-      document.getElementById('name').value = fname
-      document.getElementById('Company').value = Company
-      document.getElementById('Message').value = Message
-      document.getElementById('email').value = Email
-
-
+      fname = fname.replace(/\s+/g, " ").trim();
+      Company = Company.replace(/\s+/g, " ").trim();
+      Message = Message.replace(/\s+/g, " ").trim();
+      Email = Email.replace(/\s+/g, " ").trim();
+      document.getElementById("name").value = fname;
+      document.getElementById("Company").value = Company;
+      document.getElementById("Message").value = Message;
+      document.getElementById("email").value = Email;
     }
     $(document).ready(function () {
-
       $(".customer-logos").slick({
         slidesToShow: 6,
         slidesToScroll: 1,
@@ -517,6 +611,77 @@
     });
   </script>
   <script>
+    function validateBeforeSubmit() {
+      let fname = document.getElementById("name").value;
+      fname = fname.trim();
+      let company = document.getElementById("Company").value;
+      company = company.trim();
+      let email = document.getElementById("email").value;
+      email = email.trim();
+      let phone = document.getElementById("Message").value;
+      phone = phone.trim();
+      let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      fNameError = document.getElementById("nameErr");
+      phoneError = document.getElementById("textErr");
+      companyError = document.getElementById("companyErr");
+      emailError = document.getElementById("emailErr");
+      if (fname.length < 1) {
+        $("#name").addClass("is-invalid");
+        fNameError.innerHTML = "Please enter Name\r\n";
+      } else if (
+        fname.length > 0 &&
+        $("#name").hasClass("is-invalid")
+      ) {
+        $("#name").removeClass("is-invalid");
+        fNameError.innerHTML = "";
+      }
+      //console.log(mailformat.test(document.getElementById("email").value));
+      if (
+        email.length < 1 ||
+        !mailformat.test(document.getElementById("email").value)
+      ) {
+        $("#email").addClass("is-invalid");
+
+        if (email.length == 0) {
+          emailError.innerHTML = "Please enter Email\r\n";
+        } else {
+          emailError.innerHTML = "Please Enter valid Email\r\n";
+        }
+      } else if (
+        email.length > 0 &&
+        mailformat.test(document.getElementById("email").value)
+      ) {
+        $("#email").removeClass("is-invalid");
+        emailError.innerHTML = "";
+      }
+
+      if (phone.length === 0) {
+        $("#Message").addClass("is-invalid");
+        phoneError.innerHTML = "Please enter some Text\r\n";
+      } else if (phone.length > 0 && $("#Message").hasClass("is-invalid")) {
+        $("#Message").removeClass("is-invalid");
+        phoneError.innerHTML = "";
+      }
+
+      if (company.length < 1) {
+        $("#Company").addClass("is-invalid");
+        companyError.innerHTML = "Please enter Company name\r\n";
+      } else if (company.length > 0 && $("#Company").hasClass("is-invalid")) {
+        $("#Company").removeClass("is-invalid");
+        companyError.innerHTML = "";
+      }
+
+      if (
+        !(
+          $("#Company").hasClass("is-invalid") ||
+          $("#Message").hasClass("is-invalid") ||
+          $("#email").hasClass("is-invalid") ||
+          $("#name").hasClass("is-invalid")
+        )
+      ) {
+        createRequestLead();
+      }
+    }
     function createRequestLead() {
       let fname = document.getElementById('name').value
       let Company = document.getElementById('Company').value

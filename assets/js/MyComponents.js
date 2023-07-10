@@ -874,7 +874,7 @@ class Whatsapp_Chat extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = ` <div style="position: fixed;bottom: 10px;z-index: 36;right: 22px;" class="Whatsapp d-block" id="whatsapp_logo">
-    <a href=" https://wa.me/+919999105081?text=Hello" target="_blank"> <img src="./assets/img/Whatsapp_Logo.png" alt="Whatsapp_Logo"
+    <a href=" https://wa.me/+919999105081?text=Hello,%20I%20came%20across%20cloud%20certitude%20website.%20I%20want%20to%20know%20more%20about%20the%20company." target="_blank"> <img src="./assets/img/Whatsapp_Logo.png" alt="Whatsapp_Logo"
         style="width: 50px;"></a>
 
     <!-- <i class="bi bi-whatsapp" style="color: #198754; font-size: 40px;"></i> -->
@@ -915,7 +915,7 @@ class ShowToast extends HTMLElement {
             </path>
           </svg>
         </div>
-        <div class="p-0">
+        <div class="p-0 toastDivNew" style="margin-left:-40px;">  
           <strong>Success</strong>
           <div>Request Submitted</div>
         </div>
@@ -947,7 +947,7 @@ class ShowToast extends HTMLElement {
             </path>
           </svg>
         </div>
-        <div class="p-0">
+        <div class="p-0 toastDivNew" style="margin-left:-40px;">
           <strong>Error Occured</strong>
           <div>Request Not Submitted</div>
         </div>

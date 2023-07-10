@@ -44,6 +44,11 @@ input::-webkit-inner-spin-button {
     border: 1px solid red !important;
   }
 }
+@media only screen and (max-width: 1300px) and (min-width: 250px) {
+  .toastDivNew {
+    margin-left: -10px !important;
+  }
+}
 .HeroImage {
   width: 250px !important;
 }
