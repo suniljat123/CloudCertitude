@@ -7,7 +7,7 @@ class Footer extends HTMLElement {
       <div style="text-align: center;">
 
         <img src="assets/img/cloudlogo.png" height="100" width="170" />
-        <p>Maximize Salesforce User Adoption and Transform Customer Experiences.</p>
+        <p>Maximize Salesforce User Adoption and Transform Customer Experiences</p>
 
       </div>
       <br>
