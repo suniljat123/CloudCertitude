@@ -40,7 +40,7 @@ class Footer extends HTMLElement {
         <div class="col-lg-3 col-md-6 footer-links d-flex">
           <i class="bi bi-clock icon"></i>
           <div>
-            <h4>Opening Hours</h4>
+            <h4>Working Hours</h4>
             <p> 
               <strong>Mon - Fri: </strong>10 AM - 7 PM IST<br>
                <strong>Sat - Sun:</strong> Closed
