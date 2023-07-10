@@ -163,10 +163,10 @@ class Navbar extends HTMLElement {
     <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
       <h1 class="logo">
-        <a href="index.html"><img src="assets/img/cloudlogo.png" height="100" width="100" /></a>
+        <a href="./"><img src="assets/img/cloudlogo.png" height="100" width="100" /></a>
       </h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- <a href="./" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -393,14 +393,14 @@ class AllNavbar extends HTMLElement {
     this.innerHTML = `<header id="header" class="fixed-top"  >
     <div class="container d-flex align-items-center justify-content-between">
       <h1 class="logo">
-        <a href="index.html"><img src="assets/img/cloudlogo.png" height="100" width="100" /></a>
+        <a href="./"><img src="assets/img/cloudlogo.png" height="100" width="100" /></a>
       </h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- <a href="./" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
-          <!-- <li><a class="nav-link scrollto active" href="index.html">Home</a></li> -->
+          <!-- <li><a class="nav-link scrollto active" href="./">Home</a></li> -->
 
           <li class="dropdown dropDownServiceNormal">
             <a href="#Features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
@@ -608,9 +608,9 @@ class AllNavbar extends HTMLElement {
           <li class="dropdown">
             <a href="#About"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="./index.html#about">About us</a></li>
+              <li><a href="././#about">About us</a></li>
                <li><a href="#testimonials">Testimonials</a></li>
-              <li><a href="./index.html#team">Leadership</a></li>
+              <li><a href="././#team">Leadership</a></li>
               <li><a href="Career.html">Careers</a></li>
               <li><a href="CaseStudy.html">Case Study</a></li>
               <li><a href="Contact.html">Contact us</a></li>
@@ -618,7 +618,7 @@ class AllNavbar extends HTMLElement {
           </li>
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
           <li>
-            <a class="getstarted scrollto" href="./index.html#contact">Request Demo</a>
+            <a class="getstarted scrollto" href="././#contact">Request Demo</a>
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -634,14 +634,14 @@ class ContactCareerNavbar extends HTMLElement {
     this.innerHTML = `<header id="header" class="fixed-top"  >
     <div class="container d-flex align-items-center justify-content-between">
       <h1 class="logo">
-        <a href="index.html"><img src="assets/img/cloudlogo.png" height="100" width="100" /></a>
+        <a href="./"><img src="assets/img/cloudlogo.png" height="100" width="100" /></a>
       </h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- <a href="./" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
-          <!-- <li><a class="nav-link scrollto active" href="index.html">Home</a></li> -->
+          <!-- <li><a class="nav-link scrollto active" href="./">Home</a></li> -->
 
           <li class="dropdown dropDownServiceNormal">
             <a href="#Features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
@@ -849,10 +849,10 @@ class ContactCareerNavbar extends HTMLElement {
           <li class="dropdown">
             <a href="#About"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="./index.html#about">About us</a></li>
-              <li><a href="./index.html#testimonials">Testimonials</a></li>
+              <li><a href="././#about">About us</a></li>
+              <li><a href="././#testimonials">Testimonials</a></li>
 
-              <li><a href="./index.html#team">Leadership</a></li>
+              <li><a href="././#team">Leadership</a></li>
               <li><a href="Career.html">Careers</a></li>
               <li><a href="CaseStudy.html">Case Study</a></li>
               <li><a href="Contact.html">Contact us</a></li>
@@ -860,7 +860,7 @@ class ContactCareerNavbar extends HTMLElement {
           </li>
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
           <li>
-            <a class="getstarted scrollto" href="./index.html#contact">Request Demo</a>
+            <a class="getstarted scrollto" href="././#contact">Request Demo</a>
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
