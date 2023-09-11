@@ -389,6 +389,7 @@
         fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
           .then(response => response.json())
           .then(result => {
+              console.log('result verifyOtp=',result)
             EmailOtp = result
 
             window.open(result, '_blank')
@@ -432,6 +433,7 @@
       fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
+          console.log('result sendOtp=',result)
           EmailOtp = result
 
         })
