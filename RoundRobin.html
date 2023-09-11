@@ -345,7 +345,6 @@
       fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
-          console.log('result=',result)
           let atTheRateIndex = result.indexOf("@");
           let createdDate = result.substring(0, atTheRateIndex);
           let LastModifiedDate = result.substring(atTheRateIndex + 1, result.length);
@@ -389,7 +388,6 @@
         fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
           .then(response => response.json())
           .then(result => {
-              console.log('result verifyOtp=',result)
             EmailOtp = result
 
             window.open(result, '_blank')
@@ -433,7 +431,6 @@
       fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
-          console.log('result sendOtp=',result)
           EmailOtp = result
 
         })
