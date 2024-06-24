@@ -1820,77 +1820,74 @@ section {
   color: #fff;
 }
 
-
-.blogSection{
+.blogSection {
   display: flex;
   justify-content: center;
-
 }
-.innerDivBlog{
+.innerDivBlog {
   max-width: 900px;
 }
-.mainTopicBlog{
+.mainTopicBlog {
   text-align: left;
 }
-.mainTopicBlog h1{
+.mainTopicBlog h1 {
   font-size: 24px !important;
   font-weight: 600;
-  padding: 15px 0px; 
+  padding: 15px 0px;
   color: #032d60 !important;
   font-family: sans-serif !important;
 }
-.header2Blog{
+.header2Blog {
   font-size: 22px !important;
   font-weight: 600;
   padding: 15px 0px;
   color: #032d60 !important;
   font-family: sans-serif !important;
 }
-.centerTopic{
+.centerTopic {
   font-size: 23px;
   padding: 15px 0px;
   color: #032d60 !important;
-  font-weight: 700; 
+  font-weight: 700;
 }
-.content p{
-  font-size: 1rem; 
+.content p {
+  font-size: 1rem;
   font-family: sans-serif !important;
 }
 
-.imgCenterBlog{
+.imgCenterBlog {
   height: 500px;
 }
-.imgCenterBlog23{  
+.imgCenterBlog23 {
   height: 400px;
-  
 }
 
 @media only screen and (max-width: 700px) and (min-width: 150px) {
-   .blogSection{
+  .blogSection {
     display: block !important;
     padding-left: 15px !important;
     padding-right: 15px !important;
-   }
-   .imgCenterBlog{
-     height: 260px !important;
-   }
-   .imgCenterBlog23{
+  }
+  .imgCenterBlog {
+    height: 260px !important;
+  }
+  .imgCenterBlog23 {
     height: 275px !important;
     width: 300px !important;
   }
-  .pdfMainDiv{
+  .pdfMainDiv {
     display: block !important;
   }
-  .blogSectionNew{
-    padding: 2% 4% !important; 
+  .blogSectionNew {
+    padding: 2% 4% !important;
   }
 }
 
-.blogSectionNew{
-padding: 3% 18%;      
+.blogSectionNew {
+  padding: 3% 18%;
 }
 
-.pdfMainDiv {  
+.pdfMainDiv {
   display: flex;
 }
 
@@ -1899,14 +1896,13 @@ padding: 3% 18%;
 }
 
 .pdSecondDiv {
-  flex: 0 0 60%;  
+  flex: 0 0 60%;
   padding: 10px;
-  padding-top: 0px; 
+  padding-top: 0px;
   padding-left: 20px !important;
 }
 
-
-.noteHeader{
+.noteHeader {
   font-size: 26px !important;
   font-weight: 600;
   padding: 10px 0px;
@@ -1914,53 +1910,43 @@ padding: 3% 18%;
   font-family: sans-serif !important;
 }
 
-.pTagBlogPage{
+.pTagBlogPage {
   margin-bottom: 0px !important;
   font-weight: 800 !important;
 }
 
-.pdSecondDiv p{
+.pdSecondDiv p {
   font-size: 0.95rem !important;
 }
 
-.h1Blog{
+.h1Blog {
   font-size: 1.5rem !important;
   font-weight: 600;
   padding: 10px 0px;
   color: #032d60 !important;
-  font-family: sans-serif !important;  
+  font-family: sans-serif !important;
 }
 
-.carousel .carousel-control-next-icon{
-    background-image: url('/CloudCertitude-master/assets/img/right-arrow.png') !important;  
+.carousel .carousel-control-next-icon {
+  background-image: url("../img/right-arrow.png") !important;
 }
 
-.carousel .carousel-control-prev-icon{
-  background-image: url('/CloudCertitude-master/assets/img/right-arrow.png') !important;
+.carousel .carousel-control-prev-icon {
+  background-image: url("../img/right-arrow.png") !important;
 }
-
 
 .carousel-control-next-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* width: 40%; */
-    /* height: 40%; */
-}
-
-.carousel  .carousel-control-prev-icon{
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
+  /* width: 40%; */
+  /* height: 40%; */
+}
+
+.carousel .carousel-control-prev-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* width: 40%; */
   transform: rotate(180deg) !important;
 }
-
-
-
-
-
-
-
-
-
