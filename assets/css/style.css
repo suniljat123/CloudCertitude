@@ -38,17 +38,18 @@ input::-webkit-inner-spin-button {
     display: none !important;
   }
   .dropDownServiceMobile {
-    display: block !important;
+    display: block !important;  
   }
   .RequestDemo {
     border: 1px solid red !important;
   }
 }
-@media only screen and (max-width: 1300px) and (min-width: 250px) {
-  .toastDivNew {
-    margin-left: -10px !important;
+@media only screen and (max-width: 1500px) and (min-width: 250px) {
+  .toastDivNew{
+    margin-left: -10px !important;    
   }
-}
+} 
+
 .HeroImage {
   width: 250px !important;
 }

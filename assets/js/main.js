@@ -333,11 +333,11 @@ function callToast() {
   toastDiv.style.display = "flex";
   setTimeout(() => {
     document.getElementById("successDiv").style.display = "none";
-  }, 4000);
+  }, 200000);
   const toastEement = document.getElementById("formendSuccess");
   const toastEl = new bootstrap.Toast(toastEement, {
     animation: true,
-    delay: 4000,
+    delay: 200000,
   });
   toastEl.show();
 }
@@ -347,11 +347,11 @@ function callError() {
   setTimeout(() => {
     console;
     document.getElementById("toastDiv").style.display = "none";
-  }, 4000);
+  }, 2000000);
   const toastEement = document.getElementById("formendError");
   const toastEl = new bootstrap.Toast(toastEement, {
     animation: true,
-    delay: 4000,
+    delay: 2000000,   
   });
   toastEl.show();
 }

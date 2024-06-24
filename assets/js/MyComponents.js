@@ -7,7 +7,7 @@ class Footer extends HTMLElement {
       <div style="text-align: center;">
 
         <img src="assets/img/cloudlogo.png" height="100" width="170" />
-        <p>Maximize Salesforce User Adoption and Transform Customer Experiences</p>
+        <p>Maximize Salesforce User Adoption and Transform Customer Experiences.</p>
 
       </div>
       <br>
@@ -40,7 +40,7 @@ class Footer extends HTMLElement {
         <div class="col-lg-3 col-md-6 footer-links d-flex">
           <i class="bi bi-clock icon"></i>
           <div>
-            <h4>Working Hours</h4>
+            <h4>Opening Hours</h4>
             <p> 
               <strong>Mon - Fri: </strong>10 AM - 7 PM IST<br>
                <strong>Sat - Sun:</strong> Closed
@@ -372,6 +372,8 @@ class Navbar extends HTMLElement {
               <li><a href="Career.html">Careers</a></li>
               <li><a href="CaseStudy.html">Case Study</a></li>
               <li><a href="Contact.html">Contact us</a></li>
+              <li><a href="Blog.html">Blog</a></li>   
+                <li><a href="AnnualReport.html">Annual Report</a></li> 
             </ul>
           </li>
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
@@ -614,6 +616,8 @@ class AllNavbar extends HTMLElement {
               <li><a href="Career.html">Careers</a></li>
               <li><a href="CaseStudy.html">Case Study</a></li>
               <li><a href="Contact.html">Contact us</a></li>
+                <li><a href="Blog.html">Blog</a></li> 
+                <li><a href="AnnualReport.html">Annual Report</a></li>     
             </ul>
           </li>
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
@@ -874,7 +878,7 @@ class Whatsapp_Chat extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = ` <div style="position: fixed;bottom: 10px;z-index: 36;right: 22px;" class="Whatsapp d-block" id="whatsapp_logo">
-    <a href=" https://wa.me/+919999105081?text=Hello,%20I%20came%20across%20cloud%20certitude%20website.%20I%20want%20to%20know%20more%20about%20the%20company." target="_blank"> <img src="./assets/img/Whatsapp_Logo.png" alt="Whatsapp_Logo"
+    <a href=" https://wa.me/918390188805?text=Hello" target="_blank"> <img src="./assets/img/Whatsapp_Logo.png" alt="Whatsapp_Logo"
         style="width: 50px;"></a>
 
     <!-- <i class="bi bi-whatsapp" style="color: #198754; font-size: 40px;"></i> -->
@@ -901,7 +905,7 @@ class Whatsapp_Chat extends HTMLElement {
 class ShowToast extends HTMLElement {
   constructor() {
     super();
-    this.innerHTML = `<div id="toastDiv"
+    this.innerHTML = `<div id="toastDiv"   
     style="position:fixed; top: 80px;z-index:10000;display:none;flex-direction:column;width:100%;height:4rem;align-items:center;">
     <div id="formendSuccess" class="toast"
       style="background-color: rgb(255, 255, 255);width: 25%;justify-content: center;height: 100%;border-left-style: solid;border-left-width: thick;border-left-color: #14ed25;min-width:18rem;"
@@ -915,7 +919,7 @@ class ShowToast extends HTMLElement {
             </path>
           </svg>
         </div>
-        <div class="p-0 toastDivNew" style="margin-left:-40px;">  
+        <div class="p-0">
           <strong>Success</strong>
           <div>Request Submitted</div>
         </div>
@@ -925,10 +929,6 @@ class ShowToast extends HTMLElement {
           <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"
             onclick="crossClicked()"></button>
         </div>
-
-
-
-
       </div>
     </div>
 
@@ -947,7 +947,7 @@ class ShowToast extends HTMLElement {
             </path>
           </svg>
         </div>
-        <div class="p-0 toastDivNew" style="margin-left:-40px;">
+        <div class="p-0 toastDivNew" style="margin-left:-40px;">  
           <strong>Error Occured</strong>
           <div>Request Not Submitted</div>
         </div>
