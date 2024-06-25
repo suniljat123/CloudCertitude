@@ -372,8 +372,7 @@ class Navbar extends HTMLElement {
               <li><a href="Career.html">Careers</a></li>
               <li><a href="CaseStudy.html">Case Study</a></li>
               <li><a href="Contact.html">Contact us</a></li>
-              <li><a href="Blog.html">Blog</a></li>   
-                <li><a href="AnnualReport.html">Annual Report</a></li> 
+                <li><a href="News.html">News</a></li>         
             </ul>
           </li>
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
@@ -616,8 +615,7 @@ class AllNavbar extends HTMLElement {
               <li><a href="Career.html">Careers</a></li>
               <li><a href="CaseStudy.html">Case Study</a></li>
               <li><a href="Contact.html">Contact us</a></li>
-                <li><a href="Blog.html">Blog</a></li> 
-                <li><a href="AnnualReport.html">Annual Report</a></li>     
+                 <li><a href="News.html">News</a></li>     
             </ul>
           </li>
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
@@ -855,7 +853,6 @@ class ContactCareerNavbar extends HTMLElement {
             <ul>
               <li><a href="././#about">About us</a></li>
               <li><a href="././#testimonials">Testimonials</a></li>
-
               <li><a href="././#team">Leadership</a></li>
               <li><a href="Career.html">Careers</a></li>
               <li><a href="CaseStudy.html">Case Study</a></li>
